@@ -44,3 +44,5 @@ def _recursiveParser(parent):
             getattr(obj, childTagName).append(_recursiveParser(child))
 
     return obj
+
+#TODO: Add support for writing to XML string

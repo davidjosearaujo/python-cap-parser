@@ -1,9 +1,11 @@
+from datetime import datetime, timezone
+
 class Alert(object):
     def __init__(self):
-        self.xmlns = None
+        self.xmlns = "urn:oasis:names:tc:emergency:cap:1.2"
         self.identifier = None
         self.sender = None
-        self.sent = None
+        self.sent = datetime.now().astimezone(timezone.utc).isoformat(timespec='seconds')
         self.status = None
         self.msgType = None
         self.source = None
@@ -15,6 +17,24 @@ class Alert(object):
         self.references = None
         self.incidents = None
         self.info = []
+
+    def addAddress(self, address):
+        if ' ' in address:
+            address = "\"" + address + "\""
+        self.addresses.concat(address)
+
+    def removeAddress(self, address):
+        if ' ' in address:
+            address = "\"" + address + "\""
+        self.addresses.replace(address, "")
+
+    def addReference(self, sender, identifier, sent):
+        self.references.concat(" " + sender + "," + identifier + "," + sent)
+        self.references.strip()
+
+    def removeReference(self, sender, identifier, sent):
+        self.references.replace(" " + sender + "," + identifier + "," + sent, "")
+        self.references.strip()
 
     def __str__(self):
         return "alert"
@@ -42,6 +62,15 @@ class Info(object):
         self.parameter = []
         self.resource = []
         self.area = []
+
+    def setEffective(self, dateTime):
+        self.effective = dateTime.astimezone(timezone.utc).isoformat(timespec='seconds')
+
+    def setOnset(self, dateTime):
+        self.onset = dateTime.astimezone(timezone.utc).isoformat(timespec='seconds')
+
+    def setExpires(self, dateTime):
+        self.expires = dateTime.astimezone(timezone.utc).isoformat(timespec='seconds')
 
     def __str__(self):
         return "info"
