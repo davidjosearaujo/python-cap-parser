@@ -11,6 +11,7 @@ def parse(filePath=None, stringXML=None):
     root = ET.fromstring(stringXML)
     return _recursiveParser(root)
 
+
 def _recursiveParser(parent):
     _, _, tagName = parent.tag.rpartition('}')
     obj = None
@@ -30,7 +31,7 @@ def _recursiveParser(parent):
         obj = classes.Geocode()
     else:
         return None
-        
+
     for child in parent:
         _, _, childTagName = child.tag.rpartition('}')
         if len(child) == 0:
@@ -39,10 +40,45 @@ def _recursiveParser(parent):
                     if len(parent.findall(child.tag)) == 1:
                         setattr(obj, childTagName, child.text)
                     else:
-                        getattr(obj, childTagName).append(child.text)          
+                        getattr(obj, childTagName).append(child.text)
         else:
             getattr(obj, childTagName).append(_recursiveParser(child))
 
     return obj
 
-#TODO: Add support for writing to XML string
+def deparse(alert):
+    return ET.tostring(_recursiveDeparser(alert), encoding='utf8')
+
+def writeAlertToFile(alert, filePath):
+    root = _recursiveDeparser(alert)
+    tree = ET.ElementTree(root)
+    with open("CAP-v1.2.xsd") as f:
+        xmlschema_doc = etree.parse(f)
+    xmlschema = etree.XMLSchema(xmlschema_doc)
+    xmlschema.assertValid(doc)
+
+    with open(filePath, "wb") as files:
+        tree.write(files)
+
+def _recursiveDeparser(obj, outputFilePath=None):
+    root = ET.Element(str(obj))
+    for attr in inspect.getmembers(obj):
+        if not attr[0].startswith('_') and not inspect.ismethod(attr[1]) and attr[1] != None and attr[0] != []:
+            if attr[0] == "xmlns":
+                root.set(attr[0], attr[1])
+            elif isinstance(attr[1], list):
+                for item in attr[1]:
+                    if isinstance(item, classes.Alert) or isinstance(item, classes.Info) or isinstance(item, classes.EventCode) or isinstance(item, classes.Parameter) or isinstance(item, classes.Resource) or isinstance(item, classes.Area) or isinstance(item, classes.Geocode):
+                        root.append(_recursiveDeparser(item))
+                    else:
+                        child = ET.SubElement(root, attr[0])
+                        child.text = item
+            else:
+                if isinstance(attr[1], classes.Alert) or isinstance(attr[1], classes.Info) or isinstance(attr[1], classes.EventCode) or isinstance(attr[1], classes.Parameter) or isinstance(attr[1], classes.Resource) or isinstance(attr[1], classes.Area) or isinstance(attr[1], classes.Geocode):
+                    root.append(_recursiveDeparser(attr[1]))
+                else:
+                    child = ET.SubElement(root, attr[0])
+                    child.text = attr[1]
+
+    return root
+

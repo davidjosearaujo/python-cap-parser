@@ -36,6 +36,9 @@ class Alert(object):
         self.references.replace(" " + sender + "," + identifier + "," + sent, "")
         self.references.strip()
 
+    def __tag__(self):
+        return "alert"
+
     def __str__(self):
         return "alert"
 
