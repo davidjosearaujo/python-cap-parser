@@ -3,8 +3,6 @@ import enums
 import random
 import re
 
-# FEATURE: Add Remove methods for all the non obligatory attributes
-
 class Alert(object):
     def __init__(self, identifier=None, sender="CAPParser", sent=None, status=enums.Status.Actual, msgType=enums.MsgType.Alert, scope=enums.Scope.Public):
         '''Create a new Alert object, with the following obligatory parameters: identifier, sender, sent, status, msgType and scope. The identifier and sent parameters can be None, in which case they will be generated automatically.'''
@@ -103,7 +101,7 @@ class Alert(object):
 
         if scope == enums.Scope.Private and self.addresses[0] == None:
             self.addresses = ("\"CAP Default Address\"", 9)
-            
+
         self.scope = (scope, 7)
 
     def getScope(self):
