@@ -10,7 +10,7 @@
 >
 > In *www.fema.gov*
 
-In other order, CAP is XML message-formatted based communication focussed one structuring the main aspects of any given emergency in a easy to read / easy to exchange message.
+Simply putting, CAP is XML message-formatted based communication focussed one structuring the main aspects of any given emergency in a easy to read / easy to exchange message.
 This messages can then be used for communication between devices and for long-term storage in XML files.
 
 It was developed by **Oasis Open**, and full specifications can be found [here](https://docs.oasis-open.org/emergency/cap/v1.2/CAP-v1.2.html).
