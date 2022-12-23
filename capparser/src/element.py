@@ -262,9 +262,9 @@ class Alert(object):
 
 
 class Info(object):
-    def __init__(self, language="en-US", category=[enums.Category.Other], event="CAPParser Default Event", urgency=enums.Urgency.Immediate, severity=enums.Severity.Severe, certainty=enums.Certainty.Observed):
+    def __init__(self, category=[enums.Category.Other], event="CAPParser Default Event", urgency=enums.Urgency.Immediate, severity=enums.Severity.Severe, certainty=enums.Certainty.Observed):
         '''Initialize an Info object. The language must be a string. The category, urgency, severity, and certainty must be enums. If no parameters are given, the default values will be used.'''
-        self.language = (language, 0)
+        self.language = (None, 0)
         self.category = ([], 1)  
         self.event = (event, 2)  
         self.responseType = ([], 3)

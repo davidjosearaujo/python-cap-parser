@@ -1,0 +1,7 @@
+LICENSE
+setup.py
+capparser/src/capparser.py
+capparser/src/capparser.egg-info/PKG-INFO
+capparser/src/capparser.egg-info/SOURCES.txt
+capparser/src/capparser.egg-info/dependency_links.txt
+capparser/src/capparser.egg-info/top_level.txt

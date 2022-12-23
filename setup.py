@@ -20,11 +20,4 @@ setuptools.setup(
     python_requires='>=3.6',
     py_modules=["capparser"],
     package_dir={'': 'capparser/src'},
-    install_requires=[
-        "xml.etree.ElementTree",
-        "random",
-        "inspect",
-        "re",
-        "datetime"
-    ]
 )
