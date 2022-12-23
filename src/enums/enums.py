@@ -47,7 +47,7 @@ class ResponseType(Enum):
     NoResponse = 9
 
 class Urgency(Enum):
-    Immidiate = 1
+    Immediate = 1
     Expected = 2
     Future = 3
     Past = 4

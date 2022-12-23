@@ -1,7 +1,7 @@
-from structures import classes, enums
+from classes import classes
+from enums import enums
 import xml.etree.ElementTree as ET
 import inspect
-
 
 def parse(filePath=None, stringXML=None):
     if filePath != None:
@@ -38,11 +38,11 @@ def _recursiveParser(parent):
             for attr in inspect.getmembers(obj):
                 if attr[0] == childTagName:
                     if len(parent.findall(child.tag)) == 1:
-                        setattr(obj, childTagName, child.text)
+                        setattr(obj, childTagName, (child.text, attr[1][1]))
                     else:
-                        getattr(obj, childTagName).append(child.text)
+                        getattr(obj, childTagName)[0].append(child.text)
         else:
-            getattr(obj, childTagName).append(_recursiveParser(child))
+            getattr(obj, childTagName)[0].append(_recursiveParser(child))
 
     return obj
 
@@ -52,33 +52,35 @@ def deparse(alert):
 def writeAlertToFile(alert, filePath):
     root = _recursiveDeparser(alert)
     tree = ET.ElementTree(root)
-    with open("CAP-v1.2.xsd") as f:
-        xmlschema_doc = etree.parse(f)
-    xmlschema = etree.XMLSchema(xmlschema_doc)
-    xmlschema.assertValid(doc)
-
     with open(filePath, "wb") as files:
         tree.write(files)
 
 def _recursiveDeparser(obj, outputFilePath=None):
     root = ET.Element(str(obj))
-    for attr in inspect.getmembers(obj):
-        if not attr[0].startswith('_') and not inspect.ismethod(attr[1]) and attr[1] != None and attr[0] != []:
-            if attr[0] == "xmlns":
-                root.set(attr[0], attr[1])
-            elif isinstance(attr[1], list):
-                for item in attr[1]:
-                    if isinstance(item, classes.Alert) or isinstance(item, classes.Info) or isinstance(item, classes.EventCode) or isinstance(item, classes.Parameter) or isinstance(item, classes.Resource) or isinstance(item, classes.Area) or isinstance(item, classes.Geocode):
-                        root.append(_recursiveDeparser(item))
-                    else:
-                        child = ET.SubElement(root, attr[0])
-                        child.text = item
-            else:
-                if isinstance(attr[1], classes.Alert) or isinstance(attr[1], classes.Info) or isinstance(attr[1], classes.EventCode) or isinstance(attr[1], classes.Parameter) or isinstance(attr[1], classes.Resource) or isinstance(attr[1], classes.Area) or isinstance(attr[1], classes.Geocode):
-                    root.append(_recursiveDeparser(attr[1]))
+    attrs = _filterOrderAttributes(inspect.getmembers(obj))
+    for attr in attrs:
+        if attr[0] == "xmlns":
+            root.set(attr[0], attr[1][0])
+        elif isinstance(attr[1][0], list):
+            for item in attr[1][0]:
+                if isinstance(item, classes.Alert) or isinstance(item, classes.Info) or isinstance(item, classes.EventCode) or isinstance(item, classes.Parameter) or isinstance(item, classes.Resource) or isinstance(item, classes.Area) or isinstance(item, classes.Geocode):
+                    root.append(_recursiveDeparser(item))
                 else:
                     child = ET.SubElement(root, attr[0])
-                    child.text = attr[1]
-
+                    child.text = item
+        else:
+            if isinstance(attr[1][0], classes.Alert) or isinstance(attr[1][0], classes.Info) or isinstance(attr[1][0], classes.EventCode) or isinstance(attr[1][0], classes.Parameter) or isinstance(attr[1][0], classes.Resource) or isinstance(attr[1][0], classes.Area) or isinstance(attr[1][0], classes.Geocode):
+                root.append(_recursiveDeparser(attr[1][0]))
+            else:
+                child = ET.SubElement(root, attr[0])
+                child.text = attr[1][0]
     return root
 
+
+def _filterOrderAttributes(attrs):
+    result = []
+    for attr in attrs:
+        if not attr[0].startswith('_') and not inspect.ismethod(attr[1]) and len(attr[1]) == 2 and attr[1][0] != None and attr[0] != []:
+            result.append(attr)
+    result.sort(key=lambda x: x[1][1])
+    return result

@@ -7,6 +7,7 @@ setuptools.setup(
     name="capparser",
     version="0.0.1",
     author="David Araújo",
+    author_email="david2araujo5@gmail.com",
     description="Common Alerting Protocol (CAP) parser",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -17,9 +18,13 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
-    py_modules=["quicksample"],
+    py_modules=["capparser"],
     package_dir={'': 'capparser/src'},
     install_requires=[
-        "xml.etree.ElementTree"
+        "xml.etree.ElementTree",
+        "random",
+        "inspect",
+        "re",
+        "datetime"
     ]
 )
