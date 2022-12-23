@@ -1,4 +1,5 @@
 LICENSE
+README.md
 setup.py
 capparser/src/capparser.py
 capparser/src/capparser.egg-info/PKG-INFO
