@@ -3,7 +3,6 @@ from enums import enums
 import random
 import re
 
-# FEATURE - Convert class attributes to private
 # FEATURE - Edit __str__ and create __tag__ for each class
 # FEATURE - Add docstrings
 # FEATURE - Add type hints
@@ -36,35 +35,59 @@ class Alert(object):
     def setIdentifier(self, identifier):
         self.identifier = (identifier, 1)
 
+    def getIdentifier(self):
+        return self.identifier[0]
+
     def setSender(self, sender):
         self.sender = (sender, 2)
+
+    def getSender(self):
+        return self.sender[0]
 
     def setSent(self, sent):
         if sent == None:
             sent = datetime.now()
         self.sent = (sent.astimezone(
             timezone.utc).isoformat(timespec='seconds'), 3)
+
+    def getSent(self):
+        return self.sent[0]
         
     def setStatus(self, status):
         if not isinstance(status, enums.Status):
             return None
         self.status = (status, 4)
 
+    def getStatus(self):
+        return self.status[0]
+
     def setMsgType(self, msgType):
         if not isinstance(msgType, enums.MsgType):
             return None
         self.msgType = (msgType, 5)
 
+    def getMsgType(self):
+        return self.msgType[0]
+
     def setSource(self, source):
         self.source = (source, 6)
+
+    def getSource(self):
+        return self.source[0]
 
     def setScope(self, scope):
         if not isinstance(scope, enums.Scope):
             return None
         self.scope = (scope, 7)
 
+    def getScope(self):
+        return self.scope[0]
+
     def setRestriction(self, restriction):
         self.restriction = (restriction, 8)
+
+    def getRestriction(self):
+        return self.restriction[0]
 
     def addAddress(self, address):
         if ' ' in address and  "\"" not in address:
@@ -77,6 +100,9 @@ class Alert(object):
         self.addresses[0].replace(address, "")
         self.addresses[0].strip()
 
+    def getAddresses(self):
+        return self.addresses[0]
+
     def addCode(self, code):
         if ' ' in code:
             return None
@@ -85,8 +111,14 @@ class Alert(object):
     def removeCode(self, code):
         self.code[0].remove(code)
 
+    def getCodes(self):
+        return self.code[0]
+
     def setNote(self, note):
         self.note = (note, 11)
+
+    def getNote(self):
+        return self.note[0]
 
     def addReference(self, sender, identifier, sent):
         self.references[0].concat(" " + sender + "," + identifier + "," + sent)
@@ -96,6 +128,9 @@ class Alert(object):
         self.references[0].replace(sender + "," +
                                 identifier + "," + sent, "")
         self.references[0].strip()
+
+    def getReferences(self):
+        return self.references[0]
 
     def addIncident(self, incident):
         if ' ' in incident:
@@ -109,11 +144,17 @@ class Alert(object):
         self.incidents[0].replace(incident, "")
         self.incidents[0].strip()
 
+    def getIncidents(self):
+        return self.incidents[0]
+
     def addInfo(self, info):
         self.info[0].append(info)
 
     def removeInfo(self, info):
         self.info[0].remove(info)
+
+    def getInfos(self):
+        return self.info[0]
 
     def __str__(self):
         return "alert"
@@ -146,6 +187,9 @@ class Info(object):
     def setLanguage(self, language):
         self.language = (language, 0)
 
+    def getLanguage(self):
+        return self.language[0]
+
     def addCategory(self, category):
         if not isinstance(category, enums.Category):
             return None
@@ -156,10 +200,16 @@ class Info(object):
             return None
         self.category[0].remove(category)
 
+    def getCategories(self):
+        return self.category[0]
+
     def setEvent(self, event):
         if isinstance(event, str):
             return None
         self.event = (event, 2)
+
+    def getEvent(self):
+        return self.event[0]
 
     def addResponseType(self, responseType):
         if not isinstance(responseType, enums.ResponseType):
@@ -171,23 +221,38 @@ class Info(object):
             return None
         self.responseType[0].remove(responseType)
 
+    def getResponseTypes(self):
+        return self.responseType[0]
+
     def setUrgency(self, urgency):
         if not isinstance(urgency, enums.Urgency):
             return None
         self.urgency = (urgency, 4)
+
+    def getUrgency(self):
+        return self.urgency[0]
 
     def setSeverity(self, severity):
         if not isinstance(severity, enums.Severity):
             return None
         self.severity = (severity, 5)
 
+    def getSeverity(self):
+        return self.severity[0]
+
     def setCertainty(self, certainty):
         if not isinstance(certainty, enums.Certainty):
             return None
         self.certainty = (certainty, 6)
 
+    def getCertainty(self):
+        return self.certainty[0]
+
     def setAudience(self, audience):
         self.audience = (audience, 7)
+
+    def getAudience(self):
+        return self.audience[0]
 
     def addEventCode(self, eventName, eventValue):
         self.eventCode[0].append(EventCode(eventName, eventValue))
@@ -195,37 +260,67 @@ class Info(object):
     def removeEventCode(self, eventCode):
         self.eventCode[0].remove(eventCode)
 
+    def getEventCodes(self):
+        return self.eventCode[0]
+
     def setEffective(self, dateTime):
         self.effective = dateTime.astimezone(
             timezone.utc).isoformat(timespec='seconds')
+
+    def getEffective(self):
+        return self.effective[0]
 
     def setOnset(self, dateTime):
         self.onset = dateTime.astimezone(
             timezone.utc).isoformat(timespec='seconds')
 
+    def getOnset(self):
+        return self.onset[0]
+
     def setExpires(self, dateTime):
         self.expires = dateTime.astimezone(
             timezone.utc).isoformat(timespec='seconds')
 
+    def getExpires(self):
+        return self.expires[0]
+
     def setSenderName(self, senderName):
         self.senderName = (senderName, 12)
+
+    def getSenderName(self):
+        return self.senderName[0]
 
     def setHeadline(self, headline):
         self.headline = (headline[:160], 13)
 
+    def getHeadline(self):
+        return self.headline[0]
+
     def setDescription(self, description):
         self.description = (description, 14)
 
+    def getDescription(self):
+        return self.description[0]
+
     def setInstruction(self, instruction):
         self.instruction = (instruction, 15)
+
+    def getInstruction(self):
+        return self.instruction[0]
 
     def setWeb(self, url):
         if not re.match('^https?://.+$', url):
             return None
         self.web = (url, 16)
 
+    def getWeb(self):
+        return self.web[0]
+
     def setContact(self, contact):
         self.contact = (contact, 17)
+
+    def getContact(self):
+        return self.contact[0]
 
     def addParameter(self, parameterName, parameterValue):
         self.parameter[0].append(Parameter(parameterName, parameterValue))
@@ -233,17 +328,26 @@ class Info(object):
     def removeParameter(self, parameter):
         self.parameter[0].remove(parameter)
 
+    def getParameters(self):
+        return self.parameter[0]
+
     def addResource(self, resource):
         self.resource[0].append(Resource(resource))
 
     def removeResource(self, resource):
         self.resource[0].remove(resource)
 
+    def getResources(self):
+        return self.resource[0]
+
     def addArea(self, areaDesc):
         self.area[0].append(Area(areaDesc))
 
     def removeArea(self, area):
         self.area[0].remove(area)
+
+    def getAreas(self):
+        return self.area[0]
 
     def __str__(self):
         return "info"
@@ -257,8 +361,14 @@ class EventCode(object):
     def setEventName(self, eventName):
         self.eventName = (eventName, 0)
 
+    def getEventName(self):
+        return self.eventName[0]
+
     def setEventValue(self, eventValue):
         self.eventValue = (eventValue, 1)
+
+    def getEventValue(self):
+        return self.eventValue[0]
 
     def __str__(self):
         return "eventCode"
@@ -272,8 +382,14 @@ class Parameter(object):
     def setParameterName(self, parameterName):
         self.parameterName = (parameterName, 0)
 
+    def getParameterName(self):
+        return self.parameterName[0]
+
     def setParameterValue(self, parameterValue):
         self.parameterValue = (parameterValue, 1)
+
+    def getParameterValue(self):
+        return self.parameterValue[0]
 
     def __str__(self):
         return "parameter"
@@ -291,20 +407,38 @@ class Resource(object):
     def setResourceDesc(self, resourceDesc):
         self.resourceDesc = (resourceDesc, 0)
 
+    def getResourceDesc(self):
+        return self.resourceDesc[0]
+
     def setMimeType(self, resourceMimeType):
         self.mimeType = (resourceMimeType, 1)
+
+    def getMimeType(self):
+        return self.mimeType[0]
 
     def setSize(self, size):
         self.size = (size, 2)
 
+    def getSize(self):
+        return self.size[0]
+
     def setUri(self, uri):
         self.uri = (uri, 3)
+
+    def getUri(self):
+        return self.uri[0]
 
     def setDerefUri(self, derefUri):
         self.derefUri = (derefUri, 4)
 
+    def getDerefUri(self):
+        return self.derefUri[0]
+
     def setDigest(self, digest):
         self.digest = (digest, 5)
+
+    def getDigest(self):
+        return self.digest[0]
 
     def __str__(self):
         return "resource"
