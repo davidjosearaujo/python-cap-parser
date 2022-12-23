@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: capparser
-Version: 0.0.1
+Version: 1.0.0
 Summary: Common Alerting Protocol (CAP) parser
 Author: David Araújo
 Author-email: david2araujo5@gmail.com
@@ -10,3 +10,6 @@ Classifier: Operating System :: OS Independent
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 License-File: LICENSE
+
+# Common Alerting Procotol (CAP) Parser
+
