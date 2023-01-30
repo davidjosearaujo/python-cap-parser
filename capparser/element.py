@@ -551,7 +551,7 @@ class Info(object):
         '''Add an area to the info. Must be an element.Area object.'''
         if not isinstance(areaDesc, Area):
             raise Exception("Area must be an element.Area object")
-        self.area[0].append(area)
+        self.area[0].append(areaDesc)
 
     def removeArea(self, area):
         '''Remove an area of the info. Must be an element.Area object.'''
