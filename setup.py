@@ -19,5 +19,5 @@ setuptools.setup(
     ],
     python_requires='>=3.6',
     py_modules=["capparser"],
-    package_dir={'': 'capparser/src'},
+    package_dir={'': '.'},
 )

@@ -1,0 +1,3397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>element API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>element</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from datetime import datetime, timezone
+import enums
+import random
+import re
+
+class Alert(object):
+    def __init__(self, identifier=None, sender=&#34;CAPParser&#34;, sent=None, status=enums.Status.Actual, msgType=enums.MsgType.Alert, scope=enums.Scope.Public):
+        &#39;&#39;&#39;Create a new Alert object, with the following obligatory parameters: identifier, sender, sent, status, msgType and scope. The identifier and sent parameters can be None, in which case they will be generated automatically.&#39;&#39;&#39;
+        # Check if the identifier is None and if it is, generate a random one
+        if identifier == None:
+            identifier = datetime.now().strftime(&#34;%Y%m%d%H%M%S&#34;)
+        # Check if the sent is None and if it is, generate a random one
+        if sent == None:
+            sent = datetime.now().astimezone(timezone.utc).isoformat(timespec=&#39;seconds&#39;)
+
+        self.xmlns = (&#34;urn:oasis:names:tc:emergency:cap:1.2&#34;,0)
+        self.identifier = (identifier, 1)
+        self.sender = (sender, 2)
+        self.sent = (sent, 3)
+        self.status = (status, 4)
+        self.msgType = (msgType, 5)
+        self.source = (None, 6)
+        self.scope = (scope, 7)
+        self.restriction = (None, 8)
+        self.addresses = (None, 9)
+        self.code = ([], 10)
+        self.note = (None, 11)
+        self.references = (None, 12)
+        self.incidents = (None, 13)
+        self.info = ([], 14)
+
+    def setIdentifier(self, identifier):
+        &#39;&#39;&#39;Set the identifier of the alert. This must be a string.&#39;&#39;&#39;
+        if not isinstance(identifier, str):
+            return None
+        self.identifier = (identifier, 1)
+
+    def getIdentifier(self):
+        &#39;&#39;&#39;Get the identifier of the alert.&#39;&#39;&#39;
+        return self.identifier[0]
+
+    def setSender(self, sender):
+        &#39;&#39;&#39;Set the sender of the alert. This must be a string.&#39;&#39;&#39;
+        if not isinstance(sender, str):
+            return None
+        self.sender = (sender, 2)
+
+    def getSender(self):
+        &#39;&#39;&#39;Get the sender of the alert.&#39;&#39;&#39;
+        return self.sender[0]
+
+    def setSent(self, sent):
+        &#39;&#39;&#39;Set the sent of the alert. This must be a datetime object, if it is None, it will be set to the current time.&#39;&#39;&#39;
+        if sent == None:
+            sent = datetime.now()
+        self.sent = (sent.astimezone(
+            timezone.utc).isoformat(timespec=&#39;seconds&#39;), 3)
+
+    def getSent(self):
+        &#39;&#39;&#39;Get the sent of the alert.&#39;&#39;&#39;
+        return self.sent[0]
+        
+    def setStatus(self, status):
+        &#39;&#39;&#39;Set the status of the alert. This must be a enums.Status object.&#39;&#39;&#39;
+        if not isinstance(status, enums.Status):
+            return None
+        self.status = (status, 4)
+
+    def getStatus(self):
+        &#39;&#39;&#39;Get the status of the alert.&#39;&#39;&#39;
+        return self.status[0]
+
+    def setMsgType(self, msgType):
+        &#39;&#39;&#39;Set the msgType of the alert. This must be a enums.MsgType object.&#39;&#39;&#39;
+        if not isinstance(msgType, enums.MsgType):
+            return None
+        self.msgType = (msgType, 5)
+
+    def getMsgType(self):
+        &#39;&#39;&#39;Get the msgType of the alert&#39;&#39;&#39;
+        return self.msgType[0]
+
+    def setSource(self, source):
+        &#39;&#39;&#39;Set the source of the alert. This must be a string.&#39;&#39;&#39;
+        if not isinstance(source, str):
+            return None
+        self.source = (source, 6)
+
+    def getSource(self):
+        &#39;&#39;&#39;Get the source of the alert.&#39;&#39;&#39;
+        return self.source[0]
+
+    def removeSource(self):
+        &#39;&#39;&#39;Remove the source of the alert.&#39;&#39;&#39;
+        self.source = (None, 6)
+
+    def setScope(self, scope):
+        &#39;&#39;&#39;Set the scope of the alert. This must be a enums.Scope object.&#39;&#39;&#39;
+        if not isinstance(scope, enums.Scope):
+            return None
+
+        if scope == enums.Scope.Private and self.addresses[0] == None:
+            self.addresses = (&#34;\&#34;CAP Default Address\&#34;&#34;, 9)
+
+        self.scope = (scope, 7)
+
+    def getScope(self):
+        &#39;&#39;&#39;Get the scope of the alert.&#39;&#39;&#39;
+        return self.scope[0]
+
+    def setRestriction(self, restriction):
+        &#39;&#39;&#39;Set the restriction of the alert. This must be a string.&#39;&#39;&#39;
+        if not isinstance(restriction, str):
+            return None
+        self.restriction = (restriction, 8)
+
+    def getRestriction(self):
+        &#39;&#39;&#39;Get the restriction of the alert.&#39;&#39;&#39;
+        return self.restriction[0]
+
+    def removeRestriction(self):
+        &#39;&#39;&#39;Remove the restriction of the alert.&#39;&#39;&#39;
+        self.restriction = (None, 8)
+
+    def addAddress(self, address):
+        &#39;&#39;&#39;Add an address to the alert. This must be a string.&#39;&#39;&#39;
+        if not isinstance(address, str) and &#34;\&#34;&#34; not in address:
+            return None
+
+        if self.addresses[0] == None:
+            self.addresses = (&#34;&#34;, 9)
+
+        if &#39; &#39; in address:
+            address = &#34;\&#34;&#34; + address.strips() + &#34;\&#34;&#34;
+
+        if &#34;\&#34;CAP Default Address\&#34;&#34; in self.addresses[0]:
+            self.addresses = (self.addresses[0].replace(&#34;\&#34;CAP Default Address\&#34;&#34;, &#34;&#34;),9)
+
+        self.addresses = ((self.addresses[0] + &#34; &#34; + address).strip(), 9)
+
+    def removeAddress(self, address):
+        &#39;&#39;&#39;Remove an address of the alert. This must be a string. If the scope is Private and no addresses are left, the address will be set to default value&#39;&#39;&#39;
+        if not isinstance(address, str):
+            return None
+
+        if &#39; &#39; in address:
+            address = &#34;\&#34;&#34; + address + &#34;\&#34;&#34;
+        self.addresses = (self.addresses[0].replace(address, &#34;&#34;).strip(), 9)
+
+        if self.scope[0] == enums.Scope.Private and self.addresses[0] == &#34;&#34;:
+            self.addresses = (&#34;\&#34;CAP Default Address\&#34;&#34;, 9)
+        elif self.addresses[0] == &#34;&#34;:
+            self.addresses = (None, 9)
+
+    def getAddresses(self):
+        &#39;&#39;&#39;Get the addresses of the alert.&#39;&#39;&#39;
+        return self.addresses[0]
+
+    def removeAllAddresses(self):
+        &#39;&#39;&#39;Remove all addresses of the alert. If the scope is Private, the address will be set to default value&#39;&#39;&#39;
+        self.addresses = (&#34;\&#34;CAP Default Address\&#34;&#34;,9) if self.scope[0] == enums.Scope.Private else (None,9)
+            
+    def addCode(self, code):
+        &#39;&#39;&#39;Add a code to the alert. This must be a string.&#39;&#39;&#39;
+        if not isinstance(code, str) or &#39; &#39; in code:
+            return None
+        self.code[0].append(code)
+
+    def removeCode(self, code):
+        &#39;&#39;&#39;Remove a code of the alert. This must be a string.&#39;&#39;&#39;
+        if not isinstance(code, str):
+            return None
+        self.code[0].remove(code)
+
+    def getCodes(self):
+        &#39;&#39;&#39;Get the codes of the alert.&#39;&#39;&#39;
+        return self.code[0]
+
+    def setNote(self, note):
+        &#39;&#39;&#39;Set the note of the alert. This must be a string.&#39;&#39;&#39;
+
+        if not isinstance(note, str):
+            return None
+        self.note = (note, 11)
+
+    def getNote(self):
+        &#39;&#39;&#39;Get the note of the alert.&#39;&#39;&#39;
+        return self.note[0]
+
+    def addReference(self, sender, identifier, sent):
+        &#39;&#39;&#39;Add a reference to the alert. Each must be a string.&#39;&#39;&#39;
+
+        if not isinstance(sender, str) or not isinstance(identifier, str) or not isinstance(sent, str):
+            return None
+
+        ref = sender + &#34;,&#34; + identifier + &#34;,&#34; + sent
+        if &#39; &#39; in ref:
+            ref = &#34;\&#34;&#34; + ref + &#34;\&#34;&#34;
+
+        self.references = (self.references[0] + ref.strip(), 12)
+
+    def removeReference(self, sender, identifier, sent):
+        &#39;&#39;&#39;Remove a reference of the alert. Each must be a string.&#39;&#39;&#39;
+
+        if not isinstance(sender, str) or not isinstance(identifier, str) or not isinstance(sent, str):
+            return None
+
+        ref = sender + &#34;,&#34; + identifier + &#34;,&#34; + sent
+        if &#39; &#39; in ref:
+            ref = &#34;\&#34;&#34; + ref + &#34;\&#34;&#34;
+
+        self.references = (self.references[0].replace(ref, &#34;&#34;).strip(), 12)
+
+    def getReferences(self):
+        &#39;&#39;&#39;Get the references of the alert.&#39;&#39;&#39;
+        return self.references[0]
+
+    def addIncident(self, incident):
+        &#39;&#39;&#39;Add an incident to the alert. This must be a string.&#39;&#39;&#39;
+
+        if not isinstance(incident, str):
+            return None
+
+        if &#39; &#39; in incident:
+            incident = &#34;\&#34;&#34; + incident + &#34;\&#34;&#34;
+        self.incidents = (self.incidents[0] + &#34; &#34; + incident, 13)
+
+    def removeIncidnet(self, incident):
+        &#39;&#39;&#39;Remove an incident of the alert. This must be a string.&#39;&#39;&#39;
+
+        if not isinstance(incident, str):
+            return None
+
+        if &#39; &#39; in incident:
+            incident = &#34;\&#34;&#34; + incident + &#34;\&#34;&#34;
+        self.incidents = (self.incidents[0].replace(incident, &#34;&#34;).strip() , 13)
+
+    def getIncidents(self):
+        &#39;&#39;&#39;Get the incidents of the alert.&#39;&#39;&#39;
+        return self.incidents[0]
+
+    def addInfo(self, info):
+        &#39;&#39;&#39;Add an info to the alert. This must be an element.Info object.&#39;&#39;&#39;
+        
+        if not isinstance(info, Info):
+            return None
+        self.info[0].append(info)
+
+    def removeInfo(self, info):
+        &#39;&#39;&#39;Remove an info of the alert. This must be an element.Info object.&#39;&#39;&#39;
+
+        if not isinstance(info, Info):
+            return None
+        self.info[0].remove(info)
+
+    def getInfos(self):
+        &#39;&#39;&#39;Get the infos of the alert.&#39;&#39;&#39;
+        return self.info[0]
+
+    def __str__(self):
+        return &#34;alert&#34;
+
+
+class Info(object):
+    def __init__(self, category=[enums.Category.Other], event=&#34;CAPParser Default Event&#34;, urgency=enums.Urgency.Immediate, severity=enums.Severity.Severe, certainty=enums.Certainty.Observed):
+        &#39;&#39;&#39;Initialize an Info object. The language must be a string. The category, urgency, severity, and certainty must be enums. If no parameters are given, the default values will be used.&#39;&#39;&#39;
+        self.language = (None, 0)
+        self.category = ([], 1)  
+        self.event = (event, 2)  
+        self.responseType = ([], 3)
+        self.urgency = (urgency, 4)    
+        self.severity = (severity, 5)   
+        self.certainty = (certainty, 6)  
+        self.audience = (None, 7)
+        self.eventCode = ([], 8)
+        self.effective = (None, 9)
+        self.onset = (None, 10)
+        self.expires = (None, 11)
+        self.senderName = (None, 12)
+        self.headline = (None, 13)
+        self.description = (None, 14)
+        self.instruction = (None, 15)
+        self.web = (None, 16)
+        self.contact = (None, 17)
+        self.parameter = ([], 18)
+        self.resource = ([], 19)
+        self.area = ([], 20)
+
+    def setLanguage(self, language):
+        &#39;&#39;&#39;Set the language of the info. This must be a string.&#39;&#39;&#39;
+        if not isinstance(language, str):
+            return None
+        self.language = (language, 0)
+
+    def getLanguage(self):
+        &#39;&#39;&#39;Get the language of the info.&#39;&#39;&#39;
+        return self.language[0]
+
+    def addCategory(self, category):
+        &#39;&#39;&#39;Add a category to the info. This must be an enum.Category object.&#39;&#39;&#39;
+        if not isinstance(category, enums.Category):
+            return None
+        self.category[0].append(category)
+
+    def removeCategory(self, category):
+        &#39;&#39;&#39;Remove a category of the info. This must be an enum.Category object. If the category is the only one, it will be replaced with &#34;Other&#34;.&#39;&#39;&#39;
+        if not isinstance(category, enums.Category):
+            return None
+        self.category[0].remove(category)
+        if len(self.category[0]) == 0:
+            self.category[0].append(enums.Category.Other)
+        
+    def getCategories(self):
+        &#39;&#39;&#39;Get the categories of the info.&#39;&#39;&#39;
+        return self.category[0]
+
+    def setEvent(self, event):
+        &#39;&#39;&#39;Set the event of the info. This must be a string.&#39;&#39;&#39;
+        if isinstance(event, str):
+            return None
+        self.event = (event, 2)
+
+    def getEvent(self):
+        &#39;&#39;&#39;Get the event of the info.&#39;&#39;&#39;
+        return self.event[0]
+
+    def addResponseType(self, responseType):
+        &#39;&#39;&#39;Add a responseType to the info. This must be an enum.ResponseType object.&#39;&#39;&#39;
+        if not isinstance(responseType, enums.ResponseType):
+            return None
+        self.responseType[0].append(responseType)
+
+    def removeResponseType(self, responseType):
+        &#39;&#39;&#39;Remove a responseType of the info. This must be an enum.ResponseType object.&#39;&#39;&#39;
+        if not isinstance(responseType, enums.ResponseType):
+            return None
+        self.responseType[0].remove(responseType)
+
+    def getResponseTypes(self):
+        &#39;&#39;&#39;Get the responseTypes of the info.&#39;&#39;&#39;
+        return self.responseType[0]
+
+    def setUrgency(self, urgency):
+        &#39;&#39;&#39;Set the urgency of the info. This must be an enum.Urgency object.&#39;&#39;&#39;
+        if not isinstance(urgency, enums.Urgency):
+            return None
+        self.urgency = (urgency, 4)
+
+    def getUrgency(self):
+        &#39;&#39;&#39;Get the urgency of the info.&#39;&#39;&#39;
+        return self.urgency[0]
+
+    def setSeverity(self, severity):
+        &#39;&#39;&#39;Set the severity of the info. This must be an enum.Severity object.&#39;&#39;&#39;
+        if not isinstance(severity, enums.Severity):
+            return None
+        self.severity = (severity, 5)
+
+    def getSeverity(self):
+        &#39;&#39;&#39;Get the severity of the info.&#39;&#39;&#39;
+        return self.severity[0]
+
+    def setCertainty(self, certainty):
+        &#39;&#39;&#39;Set the certainty of the info. This must be an enum.Certainty object.&#39;&#39;&#39;
+        if not isinstance(certainty, enums.Certainty):
+            return None
+        self.certainty = (certainty, 6)
+
+    def getCertainty(self):
+        &#39;&#39;&#39;Get the certainty of the info.&#39;&#39;&#39;
+        return self.certainty[0]
+
+    def setAudience(self, audience):
+        &#39;&#39;&#39;Set the audience of the info. This must be a string.&#39;&#39;&#39;
+        self.audience = (audience, 7)
+
+    def getAudience(self):
+        &#39;&#39;&#39;Get the audience of the info.&#39;&#39;&#39;
+        return self.audience[0]
+
+    def addEventCode(self, eventName, eventValue):
+        &#39;&#39;&#39;Add an eventCode to the info. These must be strings.&#39;&#39;&#39;
+        self.eventCode[0].append(EventCode(eventName, eventValue))
+
+    def removeEventCode(self, eventCode):
+        &#39;&#39;&#39;Remove an eventCode of the info. This must be an element.EventCode object.&#39;&#39;&#39;
+        self.eventCode[0].remove(eventCode)
+
+    def getEventCodes(self):
+        &#39;&#39;&#39;Get the eventCodes of the info.&#39;&#39;&#39;
+        return self.eventCode[0]
+
+    def setEffective(self, dateTime):
+        &#39;&#39;&#39;Set the effective of the info. This must be a datetime object.&#39;&#39;&#39;
+        self.effective = dateTime.astimezone(
+            timezone.utc).isoformat(timespec=&#39;seconds&#39;)
+
+    def getEffective(self):
+        &#39;&#39;&#39;Get the effective of the info.&#39;&#39;&#39;
+        return self.effective[0]
+
+    def setOnset(self, dateTime):
+        &#39;&#39;&#39;Set the onset of the info. This must be a datetime object.&#39;&#39;&#39;
+        self.onset = dateTime.astimezone(
+            timezone.utc).isoformat(timespec=&#39;seconds&#39;)
+
+    def getOnset(self):
+        &#39;&#39;&#39;Get the onset of the info.&#39;&#39;&#39;
+        return self.onset[0]
+
+    def setExpires(self, dateTime):
+        &#39;&#39;&#39;Set the expires of the info. This must be a datetime object.&#39;&#39;&#39;
+        self.expires = dateTime.astimezone(
+            timezone.utc).isoformat(timespec=&#39;seconds&#39;)
+
+    def getExpires(self):
+        &#39;&#39;&#39;Get the expires of the info.&#39;&#39;&#39;
+        return self.expires[0]
+
+    def setSenderName(self, senderName):
+        &#39;&#39;&#39;Set the senderName of the info. This must be a string.&#39;&#39;&#39;
+        self.senderName = (senderName, 12)
+
+    def getSenderName(self):
+        &#39;&#39;&#39;Get the senderName of the info.&#39;&#39;&#39;
+        return self.senderName[0]
+
+    def setHeadline(self, headline):
+        &#39;&#39;&#39;Set the headline of the info. This must be a string. The headline will be truncated to 160 characters.&#39;&#39;&#39;
+        self.headline = (headline[:160], 13)
+
+    def getHeadline(self):
+        return self.headline[0]
+
+    def setDescription(self, description):
+        &#39;&#39;&#39;Set the description of the info. This must be a string.&#39;&#39;&#39;
+        self.description = (description, 14)
+
+    def getDescription(self):
+        &#39;&#39;&#39;Get the description of the info.&#39;&#39;&#39;
+        return self.description[0]
+
+    def setInstruction(self, instruction):
+        &#39;&#39;&#39;Set the instruction of the info. This must be a string.&#39;&#39;&#39;
+        self.instruction = (instruction, 15)
+
+    def getInstruction(self):
+        &#39;&#39;&#39;Get the instruction of the info.&#39;&#39;&#39;
+        return self.instruction[0]
+
+    def setWeb(self, url):
+        &#39;&#39;&#39;Set the web of the info. This must be a string. It must start with http:// or https://&#39;&#39;&#39;
+        if not re.match(&#39;^https?://.+$&#39;, url):
+            return None
+        self.web = (url, 16)
+
+    def getWeb(self):
+        &#39;&#39;&#39;Get the web of the info.&#39;&#39;&#39;
+        return self.web[0]
+
+    def setContact(self, contact):
+        &#39;&#39;&#39;Set the contact of the info. This must be a string.&#39;&#39;&#39;
+        self.contact = (contact, 17)
+
+    def getContact(self):
+        &#39;&#39;&#39;Get the contact of the info.&#39;&#39;&#39;
+        return self.contact[0]
+
+    def addParameter(self, parameter):
+        &#39;&#39;&#39;Add a parameter to the info. This must be an element.Parameter object.&#39;&#39;&#39;
+        self.parameter[0].append(parameter)
+
+    def removeParameter(self, parameter):
+        &#39;&#39;&#39;Remove a parameter of the info. This must be an element.Parameter object.&#39;&#39;&#39;
+        self.parameter[0].remove(parameter)
+
+    def getParameters(self):
+        &#39;&#39;&#39;Get the parameters of the info.&#39;&#39;&#39;
+        return self.parameter[0]
+
+    def addResource(self, resource):
+        &#39;&#39;&#39;Add a resource to the info. This must be an element.Resource object.&#39;&#39;&#39;
+        self.resource[0].append(resource)
+
+    def removeResource(self, resource):
+        &#39;&#39;&#39;Remove a resource of the info. This must be an element.Resource object.&#39;&#39;&#39;
+        self.resource[0].remove(resource)
+
+    def getResources(self):
+        &#39;&#39;&#39;Get the resources of the info.&#39;&#39;&#39;
+        return self.resource[0]
+
+    def addArea(self, areaareaDesc):
+        &#39;&#39;&#39;Add an area to the info. This must be an element.Area object.&#39;&#39;&#39;
+        self.area[0].append(area)
+
+    def removeArea(self, area):
+        &#39;&#39;&#39;Remove an area of the info. This must be an element.Area object.&#39;&#39;&#39;
+        self.area[0].remove(area)
+
+    def getAreas(self):
+        &#39;&#39;&#39;Get the areas of the info.&#39;&#39;&#39;
+        return self.area[0]
+
+    def __str__(self):
+        return &#34;info&#34;
+
+
+class EventCode(object):
+    def __init__(self, eventName=None, eventValue=None):
+        &#39;&#39;&#39;Initialize an eventCode object. These must be strings.&#39;&#39;&#39;
+        self.valueName = (eventName, 0)
+        self.value = (eventValue, 1)
+
+    def setEventName(self, eventName):
+        &#39;&#39;&#39;Set the eventName of the eventCode. This must be a string.&#39;&#39;&#39;
+        self.eventName = (eventName, 0)
+
+    def getEventName(self):
+        &#39;&#39;&#39;Get the eventName of the eventCode.&#39;&#39;&#39;
+        return self.eventName[0]
+
+    def setEventValue(self, eventValue):
+        &#39;&#39;&#39;Set the eventValue of the eventCode. This must be a string.&#39;&#39;&#39;
+        self.eventValue = (eventValue, 1)
+
+    def getEventValue(self):
+        &#39;&#39;&#39;Get the eventValue of the eventCode.&#39;&#39;&#39;
+        return self.eventValue[0]
+
+    def __str__(self):
+        return &#34;eventCode&#34;
+
+
+class Parameter(object):
+    def __init__(self, parameterName=None, parameterValue=None):
+        &#39;&#39;&#39;Initialize a parameter object. These must be strings.&#39;&#39;&#39;
+        self.valueName = (parameterName, 0)
+        self.value = (parameterValue, 1)
+
+    def setParameterName(self, parameterName):
+        &#39;&#39;&#39;Set the parameterName of the parameter. This must be a string.&#39;&#39;&#39;
+        self.parameterName = (parameterName, 0)
+
+    def getParameterName(self):
+        &#39;&#39;&#39;Get the parameterName of the parameter.&#39;&#39;&#39;
+        return self.parameterName[0]
+
+    def setParameterValue(self, parameterValue):
+        &#39;&#39;&#39;Set the parameterValue of the parameter. This must be a string.&#39;&#39;&#39;
+        self.parameterValue = (parameterValue, 1)
+
+    def getParameterValue(self):
+        &#39;&#39;&#39;Get the parameterValue of the parameter.&#39;&#39;&#39;
+        return self.parameterValue[0]
+
+    def __str__(self):
+        return &#34;parameter&#34;
+
+
+class Resource(object):
+    def __init__(self, resourceDesc=None, resourceMimeType=None):
+        &#39;&#39;&#39;Initialize a resource object. These must be strings.&#39;&#39;&#39;
+        self.resourceDesc = (resourceDesc, 0)   
+        self.mimeType = (resourceMimeType, 1)   
+        self.size = (None, 2)
+        self.uri = (None, 3)
+        self.derefUri = (None, 4)
+        self.digest = (None, 5)
+
+    def setResourceDesc(self, resourceDesc):
+        &#39;&#39;&#39;Set the resourceDesc of the resource. This must be a string.&#39;&#39;&#39;
+        self.resourceDesc = (resourceDesc, 0)
+
+    def getResourceDesc(self):
+        &#39;&#39;&#39;Get the resourceDesc of the resource.&#39;&#39;&#39;
+        return self.resourceDesc[0]
+
+    def setMimeType(self, resourceMimeType):
+        &#39;&#39;&#39;Set the mimeType of the resource. This must be a string.&#39;&#39;&#39;
+        self.mimeType = (resourceMimeType, 1)
+
+    def getMimeType(self):
+        &#39;&#39;&#39;Get the mimeType of the resource.&#39;&#39;&#39;
+        return self.mimeType[0]
+
+    def setSize(self, size):
+        &#39;&#39;&#39;Set the size of the resource. This must be a integer.&#39;&#39;&#39;
+        self.size = (size, 2)
+
+    def getSize(self):
+        &#39;&#39;&#39;Get the size of the resource.&#39;&#39;&#39;
+        return self.size[0]
+
+    def setUri(self, uri):
+        &#39;&#39;&#39;Set the uri of the resource. This must start with http:// or https://&#39;&#39;&#39;
+        if not re.match(&#39;^https?://.+$&#39;, uri):
+            return None
+        self.uri = (uri, 3)
+
+    def getUri(self):
+        &#39;&#39;&#39;Get the uri of the resource.&#39;&#39;&#39;
+        return self.uri[0]
+
+    def setDerefUri(self, derefUri):
+        &#39;&#39;&#39;Set the derefUri of the resource. This must be a string&#39;&#39;&#39;
+        self.derefUri = (derefUri, 4)
+
+    def getDerefUri(self):
+        &#39;&#39;&#39;Get the derefUri of the resource.&#39;&#39;&#39;
+        return self.derefUri[0]
+
+    def setDigest(self, digest):
+        &#39;&#39;&#39;Set the digest of the resource. This must be a string&#39;&#39;&#39;
+        self.digest = (digest, 5)
+
+    def getDigest(self):
+        &#39;&#39;&#39;Get the digest of the resource.&#39;&#39;&#39;
+        return self.digest[0]
+
+    def __str__(self):
+        return &#34;resource&#34;
+
+
+class Area(object):
+    def __init__(self, areaDesc=None):
+        &#39;&#39;&#39;Initialize an area object with a areaDesc. This must be a string.&#39;&#39;&#39;
+        self.areaDesc = (areaDesc, 0)
+        self.polygon = ([], 1)
+        self.circle = ([], 2)
+        self.geocode = ([], 3)
+        self.altitude = (None, 4)
+        self.ceiling = (None, 5)
+
+    def setAreaDesc(self, areaDesc):
+        &#39;&#39;&#39;Set the areaDesc of the area. This must be a string.&#39;&#39;&#39;
+        self.areaDesc = (areaDesc, 0)
+
+    def addPolygon(self, polygon):
+        &#39;&#39;&#39;Add a polygon to the area. This must be a string.&#39;&#39;&#39;
+        self.polygon[0].append(polygon)
+
+    def removePolygon(self, polygon):
+        &#39;&#39;&#39;Remove a polygon from the area. This must be a string.&#39;&#39;&#39;
+        self.polygon[0].remove(polygon)
+
+    def addCircle(self, circle):
+        &#39;&#39;&#39;Add a circle to the area. This must be a string.&#39;&#39;&#39;
+        self.circle[0].append(circle)
+
+    def removeCircle(self, circle):
+        &#39;&#39;&#39;Remove a circle from the area. This must be a string.&#39;&#39;&#39;
+        self.circle[0].remove(circle)
+
+    def addGeocode(self, geocodeName, geocodeValue):
+        &#39;&#39;&#39;Add a geocode to the area. These must be strings.&#39;&#39;&#39;
+        self.geocode[0].append(Geocode(geocodeName, geocodeValue))
+
+    def removeGeocode(self, geocode):
+        &#39;&#39;&#39;Remove a geocode from the area. This must be a element.Geocode object.&#39;&#39;&#39;
+        self.geocode[0].remove(geocode)
+
+    def setAltitude(self, altitude):
+        &#39;&#39;&#39;Set the altitude of the area. This must be a float.&#39;&#39;&#39;
+        self.altitude = (altitude, 4)
+
+    def setCeiling(self, ceiling):
+        &#39;&#39;&#39;Set the ceiling of the area. This must be a float.&#39;&#39;&#39;
+        self.ceiling = (ceiling, 5)
+
+    def __str__(self):
+        return &#34;area&#34;
+
+class Geocode(object):
+    def __init__(self, geocodeName=None, geocodeValue=None):
+        &#39;&#39;&#39;Initialize a geocode object with a geocodeName and geocodeValue. These must be strings.&#39;&#39;&#39;
+        self.valueName = (geocodeName, 0)
+        self.value = (geocodeValue, 1)
+
+    def setGeocodeName(self, geocodeName):
+        &#39;&#39;&#39;Set the geocodeName of the geocode. This must be a string.&#39;&#39;&#39;
+        self.geocodeName = (geocodeName, 0)
+
+    def setGeocodeValue(self, geocodeValue):
+        &#39;&#39;&#39;Set the geocodeValue of the geocode. This must be a string.&#39;&#39;&#39;
+        self.geocodeValue = (geocodeValue, 1)
+
+    def __str__(self):
+        return &#34;geocode&#34;</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="element.Alert"><code class="flex name class">
+<span>class <span class="ident">Alert</span></span>
+<span>(</span><span>identifier=None, sender='CAPParser', sent=None, status=Status.Actual, msgType=MsgType.Alert, scope=Scope.Public)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create a new Alert object, with the following obligatory parameters: identifier, sender, sent, status, msgType and scope. The identifier and sent parameters can be None, in which case they will be generated automatically.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Alert(object):
+    def __init__(self, identifier=None, sender=&#34;CAPParser&#34;, sent=None, status=enums.Status.Actual, msgType=enums.MsgType.Alert, scope=enums.Scope.Public):
+        &#39;&#39;&#39;Create a new Alert object, with the following obligatory parameters: identifier, sender, sent, status, msgType and scope. The identifier and sent parameters can be None, in which case they will be generated automatically.&#39;&#39;&#39;
+        # Check if the identifier is None and if it is, generate a random one
+        if identifier == None:
+            identifier = datetime.now().strftime(&#34;%Y%m%d%H%M%S&#34;)
+        # Check if the sent is None and if it is, generate a random one
+        if sent == None:
+            sent = datetime.now().astimezone(timezone.utc).isoformat(timespec=&#39;seconds&#39;)
+
+        self.xmlns = (&#34;urn:oasis:names:tc:emergency:cap:1.2&#34;,0)
+        self.identifier = (identifier, 1)
+        self.sender = (sender, 2)
+        self.sent = (sent, 3)
+        self.status = (status, 4)
+        self.msgType = (msgType, 5)
+        self.source = (None, 6)
+        self.scope = (scope, 7)
+        self.restriction = (None, 8)
+        self.addresses = (None, 9)
+        self.code = ([], 10)
+        self.note = (None, 11)
+        self.references = (None, 12)
+        self.incidents = (None, 13)
+        self.info = ([], 14)
+
+    def setIdentifier(self, identifier):
+        &#39;&#39;&#39;Set the identifier of the alert. This must be a string.&#39;&#39;&#39;
+        if not isinstance(identifier, str):
+            return None
+        self.identifier = (identifier, 1)
+
+    def getIdentifier(self):
+        &#39;&#39;&#39;Get the identifier of the alert.&#39;&#39;&#39;
+        return self.identifier[0]
+
+    def setSender(self, sender):
+        &#39;&#39;&#39;Set the sender of the alert. This must be a string.&#39;&#39;&#39;
+        if not isinstance(sender, str):
+            return None
+        self.sender = (sender, 2)
+
+    def getSender(self):
+        &#39;&#39;&#39;Get the sender of the alert.&#39;&#39;&#39;
+        return self.sender[0]
+
+    def setSent(self, sent):
+        &#39;&#39;&#39;Set the sent of the alert. This must be a datetime object, if it is None, it will be set to the current time.&#39;&#39;&#39;
+        if sent == None:
+            sent = datetime.now()
+        self.sent = (sent.astimezone(
+            timezone.utc).isoformat(timespec=&#39;seconds&#39;), 3)
+
+    def getSent(self):
+        &#39;&#39;&#39;Get the sent of the alert.&#39;&#39;&#39;
+        return self.sent[0]
+        
+    def setStatus(self, status):
+        &#39;&#39;&#39;Set the status of the alert. This must be a enums.Status object.&#39;&#39;&#39;
+        if not isinstance(status, enums.Status):
+            return None
+        self.status = (status, 4)
+
+    def getStatus(self):
+        &#39;&#39;&#39;Get the status of the alert.&#39;&#39;&#39;
+        return self.status[0]
+
+    def setMsgType(self, msgType):
+        &#39;&#39;&#39;Set the msgType of the alert. This must be a enums.MsgType object.&#39;&#39;&#39;
+        if not isinstance(msgType, enums.MsgType):
+            return None
+        self.msgType = (msgType, 5)
+
+    def getMsgType(self):
+        &#39;&#39;&#39;Get the msgType of the alert&#39;&#39;&#39;
+        return self.msgType[0]
+
+    def setSource(self, source):
+        &#39;&#39;&#39;Set the source of the alert. This must be a string.&#39;&#39;&#39;
+        if not isinstance(source, str):
+            return None
+        self.source = (source, 6)
+
+    def getSource(self):
+        &#39;&#39;&#39;Get the source of the alert.&#39;&#39;&#39;
+        return self.source[0]
+
+    def removeSource(self):
+        &#39;&#39;&#39;Remove the source of the alert.&#39;&#39;&#39;
+        self.source = (None, 6)
+
+    def setScope(self, scope):
+        &#39;&#39;&#39;Set the scope of the alert. This must be a enums.Scope object.&#39;&#39;&#39;
+        if not isinstance(scope, enums.Scope):
+            return None
+
+        if scope == enums.Scope.Private and self.addresses[0] == None:
+            self.addresses = (&#34;\&#34;CAP Default Address\&#34;&#34;, 9)
+
+        self.scope = (scope, 7)
+
+    def getScope(self):
+        &#39;&#39;&#39;Get the scope of the alert.&#39;&#39;&#39;
+        return self.scope[0]
+
+    def setRestriction(self, restriction):
+        &#39;&#39;&#39;Set the restriction of the alert. This must be a string.&#39;&#39;&#39;
+        if not isinstance(restriction, str):
+            return None
+        self.restriction = (restriction, 8)
+
+    def getRestriction(self):
+        &#39;&#39;&#39;Get the restriction of the alert.&#39;&#39;&#39;
+        return self.restriction[0]
+
+    def removeRestriction(self):
+        &#39;&#39;&#39;Remove the restriction of the alert.&#39;&#39;&#39;
+        self.restriction = (None, 8)
+
+    def addAddress(self, address):
+        &#39;&#39;&#39;Add an address to the alert. This must be a string.&#39;&#39;&#39;
+        if not isinstance(address, str) and &#34;\&#34;&#34; not in address:
+            return None
+
+        if self.addresses[0] == None:
+            self.addresses = (&#34;&#34;, 9)
+
+        if &#39; &#39; in address:
+            address = &#34;\&#34;&#34; + address.strips() + &#34;\&#34;&#34;
+
+        if &#34;\&#34;CAP Default Address\&#34;&#34; in self.addresses[0]:
+            self.addresses = (self.addresses[0].replace(&#34;\&#34;CAP Default Address\&#34;&#34;, &#34;&#34;),9)
+
+        self.addresses = ((self.addresses[0] + &#34; &#34; + address).strip(), 9)
+
+    def removeAddress(self, address):
+        &#39;&#39;&#39;Remove an address of the alert. This must be a string. If the scope is Private and no addresses are left, the address will be set to default value&#39;&#39;&#39;
+        if not isinstance(address, str):
+            return None
+
+        if &#39; &#39; in address:
+            address = &#34;\&#34;&#34; + address + &#34;\&#34;&#34;
+        self.addresses = (self.addresses[0].replace(address, &#34;&#34;).strip(), 9)
+
+        if self.scope[0] == enums.Scope.Private and self.addresses[0] == &#34;&#34;:
+            self.addresses = (&#34;\&#34;CAP Default Address\&#34;&#34;, 9)
+        elif self.addresses[0] == &#34;&#34;:
+            self.addresses = (None, 9)
+
+    def getAddresses(self):
+        &#39;&#39;&#39;Get the addresses of the alert.&#39;&#39;&#39;
+        return self.addresses[0]
+
+    def removeAllAddresses(self):
+        &#39;&#39;&#39;Remove all addresses of the alert. If the scope is Private, the address will be set to default value&#39;&#39;&#39;
+        self.addresses = (&#34;\&#34;CAP Default Address\&#34;&#34;,9) if self.scope[0] == enums.Scope.Private else (None,9)
+            
+    def addCode(self, code):
+        &#39;&#39;&#39;Add a code to the alert. This must be a string.&#39;&#39;&#39;
+        if not isinstance(code, str) or &#39; &#39; in code:
+            return None
+        self.code[0].append(code)
+
+    def removeCode(self, code):
+        &#39;&#39;&#39;Remove a code of the alert. This must be a string.&#39;&#39;&#39;
+        if not isinstance(code, str):
+            return None
+        self.code[0].remove(code)
+
+    def getCodes(self):
+        &#39;&#39;&#39;Get the codes of the alert.&#39;&#39;&#39;
+        return self.code[0]
+
+    def setNote(self, note):
+        &#39;&#39;&#39;Set the note of the alert. This must be a string.&#39;&#39;&#39;
+
+        if not isinstance(note, str):
+            return None
+        self.note = (note, 11)
+
+    def getNote(self):
+        &#39;&#39;&#39;Get the note of the alert.&#39;&#39;&#39;
+        return self.note[0]
+
+    def addReference(self, sender, identifier, sent):
+        &#39;&#39;&#39;Add a reference to the alert. Each must be a string.&#39;&#39;&#39;
+
+        if not isinstance(sender, str) or not isinstance(identifier, str) or not isinstance(sent, str):
+            return None
+
+        ref = sender + &#34;,&#34; + identifier + &#34;,&#34; + sent
+        if &#39; &#39; in ref:
+            ref = &#34;\&#34;&#34; + ref + &#34;\&#34;&#34;
+
+        self.references = (self.references[0] + ref.strip(), 12)
+
+    def removeReference(self, sender, identifier, sent):
+        &#39;&#39;&#39;Remove a reference of the alert. Each must be a string.&#39;&#39;&#39;
+
+        if not isinstance(sender, str) or not isinstance(identifier, str) or not isinstance(sent, str):
+            return None
+
+        ref = sender + &#34;,&#34; + identifier + &#34;,&#34; + sent
+        if &#39; &#39; in ref:
+            ref = &#34;\&#34;&#34; + ref + &#34;\&#34;&#34;
+
+        self.references = (self.references[0].replace(ref, &#34;&#34;).strip(), 12)
+
+    def getReferences(self):
+        &#39;&#39;&#39;Get the references of the alert.&#39;&#39;&#39;
+        return self.references[0]
+
+    def addIncident(self, incident):
+        &#39;&#39;&#39;Add an incident to the alert. This must be a string.&#39;&#39;&#39;
+
+        if not isinstance(incident, str):
+            return None
+
+        if &#39; &#39; in incident:
+            incident = &#34;\&#34;&#34; + incident + &#34;\&#34;&#34;
+        self.incidents = (self.incidents[0] + &#34; &#34; + incident, 13)
+
+    def removeIncidnet(self, incident):
+        &#39;&#39;&#39;Remove an incident of the alert. This must be a string.&#39;&#39;&#39;
+
+        if not isinstance(incident, str):
+            return None
+
+        if &#39; &#39; in incident:
+            incident = &#34;\&#34;&#34; + incident + &#34;\&#34;&#34;
+        self.incidents = (self.incidents[0].replace(incident, &#34;&#34;).strip() , 13)
+
+    def getIncidents(self):
+        &#39;&#39;&#39;Get the incidents of the alert.&#39;&#39;&#39;
+        return self.incidents[0]
+
+    def addInfo(self, info):
+        &#39;&#39;&#39;Add an info to the alert. This must be an element.Info object.&#39;&#39;&#39;
+        
+        if not isinstance(info, Info):
+            return None
+        self.info[0].append(info)
+
+    def removeInfo(self, info):
+        &#39;&#39;&#39;Remove an info of the alert. This must be an element.Info object.&#39;&#39;&#39;
+
+        if not isinstance(info, Info):
+            return None
+        self.info[0].remove(info)
+
+    def getInfos(self):
+        &#39;&#39;&#39;Get the infos of the alert.&#39;&#39;&#39;
+        return self.info[0]
+
+    def __str__(self):
+        return &#34;alert&#34;</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="element.Alert.addAddress"><code class="name flex">
+<span>def <span class="ident">addAddress</span></span>(<span>self, address)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add an address to the alert. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addAddress(self, address):
+    &#39;&#39;&#39;Add an address to the alert. This must be a string.&#39;&#39;&#39;
+    if not isinstance(address, str) and &#34;\&#34;&#34; not in address:
+        return None
+
+    if self.addresses[0] == None:
+        self.addresses = (&#34;&#34;, 9)
+
+    if &#39; &#39; in address:
+        address = &#34;\&#34;&#34; + address.strips() + &#34;\&#34;&#34;
+
+    if &#34;\&#34;CAP Default Address\&#34;&#34; in self.addresses[0]:
+        self.addresses = (self.addresses[0].replace(&#34;\&#34;CAP Default Address\&#34;&#34;, &#34;&#34;),9)
+
+    self.addresses = ((self.addresses[0] + &#34; &#34; + address).strip(), 9)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.addCode"><code class="name flex">
+<span>def <span class="ident">addCode</span></span>(<span>self, code)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add a code to the alert. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addCode(self, code):
+    &#39;&#39;&#39;Add a code to the alert. This must be a string.&#39;&#39;&#39;
+    if not isinstance(code, str) or &#39; &#39; in code:
+        return None
+    self.code[0].append(code)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.addIncident"><code class="name flex">
+<span>def <span class="ident">addIncident</span></span>(<span>self, incident)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add an incident to the alert. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addIncident(self, incident):
+    &#39;&#39;&#39;Add an incident to the alert. This must be a string.&#39;&#39;&#39;
+
+    if not isinstance(incident, str):
+        return None
+
+    if &#39; &#39; in incident:
+        incident = &#34;\&#34;&#34; + incident + &#34;\&#34;&#34;
+    self.incidents = (self.incidents[0] + &#34; &#34; + incident, 13)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.addInfo"><code class="name flex">
+<span>def <span class="ident">addInfo</span></span>(<span>self, info)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add an info to the alert. This must be an element.Info object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addInfo(self, info):
+    &#39;&#39;&#39;Add an info to the alert. This must be an element.Info object.&#39;&#39;&#39;
+    
+    if not isinstance(info, Info):
+        return None
+    self.info[0].append(info)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.addReference"><code class="name flex">
+<span>def <span class="ident">addReference</span></span>(<span>self, sender, identifier, sent)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add a reference to the alert. Each must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addReference(self, sender, identifier, sent):
+    &#39;&#39;&#39;Add a reference to the alert. Each must be a string.&#39;&#39;&#39;
+
+    if not isinstance(sender, str) or not isinstance(identifier, str) or not isinstance(sent, str):
+        return None
+
+    ref = sender + &#34;,&#34; + identifier + &#34;,&#34; + sent
+    if &#39; &#39; in ref:
+        ref = &#34;\&#34;&#34; + ref + &#34;\&#34;&#34;
+
+    self.references = (self.references[0] + ref.strip(), 12)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.getAddresses"><code class="name flex">
+<span>def <span class="ident">getAddresses</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the addresses of the alert.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getAddresses(self):
+    &#39;&#39;&#39;Get the addresses of the alert.&#39;&#39;&#39;
+    return self.addresses[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.getCodes"><code class="name flex">
+<span>def <span class="ident">getCodes</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the codes of the alert.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getCodes(self):
+    &#39;&#39;&#39;Get the codes of the alert.&#39;&#39;&#39;
+    return self.code[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.getIdentifier"><code class="name flex">
+<span>def <span class="ident">getIdentifier</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the identifier of the alert.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getIdentifier(self):
+    &#39;&#39;&#39;Get the identifier of the alert.&#39;&#39;&#39;
+    return self.identifier[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.getIncidents"><code class="name flex">
+<span>def <span class="ident">getIncidents</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the incidents of the alert.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getIncidents(self):
+    &#39;&#39;&#39;Get the incidents of the alert.&#39;&#39;&#39;
+    return self.incidents[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.getInfos"><code class="name flex">
+<span>def <span class="ident">getInfos</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the infos of the alert.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getInfos(self):
+    &#39;&#39;&#39;Get the infos of the alert.&#39;&#39;&#39;
+    return self.info[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.getMsgType"><code class="name flex">
+<span>def <span class="ident">getMsgType</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the msgType of the alert</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getMsgType(self):
+    &#39;&#39;&#39;Get the msgType of the alert&#39;&#39;&#39;
+    return self.msgType[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.getNote"><code class="name flex">
+<span>def <span class="ident">getNote</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the note of the alert.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getNote(self):
+    &#39;&#39;&#39;Get the note of the alert.&#39;&#39;&#39;
+    return self.note[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.getReferences"><code class="name flex">
+<span>def <span class="ident">getReferences</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the references of the alert.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getReferences(self):
+    &#39;&#39;&#39;Get the references of the alert.&#39;&#39;&#39;
+    return self.references[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.getRestriction"><code class="name flex">
+<span>def <span class="ident">getRestriction</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the restriction of the alert.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getRestriction(self):
+    &#39;&#39;&#39;Get the restriction of the alert.&#39;&#39;&#39;
+    return self.restriction[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.getScope"><code class="name flex">
+<span>def <span class="ident">getScope</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the scope of the alert.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getScope(self):
+    &#39;&#39;&#39;Get the scope of the alert.&#39;&#39;&#39;
+    return self.scope[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.getSender"><code class="name flex">
+<span>def <span class="ident">getSender</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the sender of the alert.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getSender(self):
+    &#39;&#39;&#39;Get the sender of the alert.&#39;&#39;&#39;
+    return self.sender[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.getSent"><code class="name flex">
+<span>def <span class="ident">getSent</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the sent of the alert.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getSent(self):
+    &#39;&#39;&#39;Get the sent of the alert.&#39;&#39;&#39;
+    return self.sent[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.getSource"><code class="name flex">
+<span>def <span class="ident">getSource</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the source of the alert.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getSource(self):
+    &#39;&#39;&#39;Get the source of the alert.&#39;&#39;&#39;
+    return self.source[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.getStatus"><code class="name flex">
+<span>def <span class="ident">getStatus</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the status of the alert.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getStatus(self):
+    &#39;&#39;&#39;Get the status of the alert.&#39;&#39;&#39;
+    return self.status[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.removeAddress"><code class="name flex">
+<span>def <span class="ident">removeAddress</span></span>(<span>self, address)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove an address of the alert. This must be a string. If the scope is Private and no addresses are left, the address will be set to default value</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeAddress(self, address):
+    &#39;&#39;&#39;Remove an address of the alert. This must be a string. If the scope is Private and no addresses are left, the address will be set to default value&#39;&#39;&#39;
+    if not isinstance(address, str):
+        return None
+
+    if &#39; &#39; in address:
+        address = &#34;\&#34;&#34; + address + &#34;\&#34;&#34;
+    self.addresses = (self.addresses[0].replace(address, &#34;&#34;).strip(), 9)
+
+    if self.scope[0] == enums.Scope.Private and self.addresses[0] == &#34;&#34;:
+        self.addresses = (&#34;\&#34;CAP Default Address\&#34;&#34;, 9)
+    elif self.addresses[0] == &#34;&#34;:
+        self.addresses = (None, 9)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.removeAllAddresses"><code class="name flex">
+<span>def <span class="ident">removeAllAddresses</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove all addresses of the alert. If the scope is Private, the address will be set to default value</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeAllAddresses(self):
+    &#39;&#39;&#39;Remove all addresses of the alert. If the scope is Private, the address will be set to default value&#39;&#39;&#39;
+    self.addresses = (&#34;\&#34;CAP Default Address\&#34;&#34;,9) if self.scope[0] == enums.Scope.Private else (None,9)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.removeCode"><code class="name flex">
+<span>def <span class="ident">removeCode</span></span>(<span>self, code)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove a code of the alert. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeCode(self, code):
+    &#39;&#39;&#39;Remove a code of the alert. This must be a string.&#39;&#39;&#39;
+    if not isinstance(code, str):
+        return None
+    self.code[0].remove(code)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.removeIncidnet"><code class="name flex">
+<span>def <span class="ident">removeIncidnet</span></span>(<span>self, incident)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove an incident of the alert. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeIncidnet(self, incident):
+    &#39;&#39;&#39;Remove an incident of the alert. This must be a string.&#39;&#39;&#39;
+
+    if not isinstance(incident, str):
+        return None
+
+    if &#39; &#39; in incident:
+        incident = &#34;\&#34;&#34; + incident + &#34;\&#34;&#34;
+    self.incidents = (self.incidents[0].replace(incident, &#34;&#34;).strip() , 13)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.removeInfo"><code class="name flex">
+<span>def <span class="ident">removeInfo</span></span>(<span>self, info)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove an info of the alert. This must be an element.Info object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeInfo(self, info):
+    &#39;&#39;&#39;Remove an info of the alert. This must be an element.Info object.&#39;&#39;&#39;
+
+    if not isinstance(info, Info):
+        return None
+    self.info[0].remove(info)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.removeReference"><code class="name flex">
+<span>def <span class="ident">removeReference</span></span>(<span>self, sender, identifier, sent)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove a reference of the alert. Each must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeReference(self, sender, identifier, sent):
+    &#39;&#39;&#39;Remove a reference of the alert. Each must be a string.&#39;&#39;&#39;
+
+    if not isinstance(sender, str) or not isinstance(identifier, str) or not isinstance(sent, str):
+        return None
+
+    ref = sender + &#34;,&#34; + identifier + &#34;,&#34; + sent
+    if &#39; &#39; in ref:
+        ref = &#34;\&#34;&#34; + ref + &#34;\&#34;&#34;
+
+    self.references = (self.references[0].replace(ref, &#34;&#34;).strip(), 12)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.removeRestriction"><code class="name flex">
+<span>def <span class="ident">removeRestriction</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove the restriction of the alert.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeRestriction(self):
+    &#39;&#39;&#39;Remove the restriction of the alert.&#39;&#39;&#39;
+    self.restriction = (None, 8)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.removeSource"><code class="name flex">
+<span>def <span class="ident">removeSource</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove the source of the alert.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeSource(self):
+    &#39;&#39;&#39;Remove the source of the alert.&#39;&#39;&#39;
+    self.source = (None, 6)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.setIdentifier"><code class="name flex">
+<span>def <span class="ident">setIdentifier</span></span>(<span>self, identifier)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the identifier of the alert. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setIdentifier(self, identifier):
+    &#39;&#39;&#39;Set the identifier of the alert. This must be a string.&#39;&#39;&#39;
+    if not isinstance(identifier, str):
+        return None
+    self.identifier = (identifier, 1)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.setMsgType"><code class="name flex">
+<span>def <span class="ident">setMsgType</span></span>(<span>self, msgType)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the msgType of the alert. This must be a enums.MsgType object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setMsgType(self, msgType):
+    &#39;&#39;&#39;Set the msgType of the alert. This must be a enums.MsgType object.&#39;&#39;&#39;
+    if not isinstance(msgType, enums.MsgType):
+        return None
+    self.msgType = (msgType, 5)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.setNote"><code class="name flex">
+<span>def <span class="ident">setNote</span></span>(<span>self, note)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the note of the alert. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setNote(self, note):
+    &#39;&#39;&#39;Set the note of the alert. This must be a string.&#39;&#39;&#39;
+
+    if not isinstance(note, str):
+        return None
+    self.note = (note, 11)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.setRestriction"><code class="name flex">
+<span>def <span class="ident">setRestriction</span></span>(<span>self, restriction)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the restriction of the alert. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setRestriction(self, restriction):
+    &#39;&#39;&#39;Set the restriction of the alert. This must be a string.&#39;&#39;&#39;
+    if not isinstance(restriction, str):
+        return None
+    self.restriction = (restriction, 8)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.setScope"><code class="name flex">
+<span>def <span class="ident">setScope</span></span>(<span>self, scope)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the scope of the alert. This must be a enums.Scope object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setScope(self, scope):
+    &#39;&#39;&#39;Set the scope of the alert. This must be a enums.Scope object.&#39;&#39;&#39;
+    if not isinstance(scope, enums.Scope):
+        return None
+
+    if scope == enums.Scope.Private and self.addresses[0] == None:
+        self.addresses = (&#34;\&#34;CAP Default Address\&#34;&#34;, 9)
+
+    self.scope = (scope, 7)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.setSender"><code class="name flex">
+<span>def <span class="ident">setSender</span></span>(<span>self, sender)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the sender of the alert. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setSender(self, sender):
+    &#39;&#39;&#39;Set the sender of the alert. This must be a string.&#39;&#39;&#39;
+    if not isinstance(sender, str):
+        return None
+    self.sender = (sender, 2)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.setSent"><code class="name flex">
+<span>def <span class="ident">setSent</span></span>(<span>self, sent)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the sent of the alert. This must be a datetime object, if it is None, it will be set to the current time.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setSent(self, sent):
+    &#39;&#39;&#39;Set the sent of the alert. This must be a datetime object, if it is None, it will be set to the current time.&#39;&#39;&#39;
+    if sent == None:
+        sent = datetime.now()
+    self.sent = (sent.astimezone(
+        timezone.utc).isoformat(timespec=&#39;seconds&#39;), 3)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.setSource"><code class="name flex">
+<span>def <span class="ident">setSource</span></span>(<span>self, source)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the source of the alert. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setSource(self, source):
+    &#39;&#39;&#39;Set the source of the alert. This must be a string.&#39;&#39;&#39;
+    if not isinstance(source, str):
+        return None
+    self.source = (source, 6)</code></pre>
+</details>
+</dd>
+<dt id="element.Alert.setStatus"><code class="name flex">
+<span>def <span class="ident">setStatus</span></span>(<span>self, status)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the status of the alert. This must be a enums.Status object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setStatus(self, status):
+    &#39;&#39;&#39;Set the status of the alert. This must be a enums.Status object.&#39;&#39;&#39;
+    if not isinstance(status, enums.Status):
+        return None
+    self.status = (status, 4)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="element.Area"><code class="flex name class">
+<span>class <span class="ident">Area</span></span>
+<span>(</span><span>areaDesc=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Initialize an area object with a areaDesc. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Area(object):
+    def __init__(self, areaDesc=None):
+        &#39;&#39;&#39;Initialize an area object with a areaDesc. This must be a string.&#39;&#39;&#39;
+        self.areaDesc = (areaDesc, 0)
+        self.polygon = ([], 1)
+        self.circle = ([], 2)
+        self.geocode = ([], 3)
+        self.altitude = (None, 4)
+        self.ceiling = (None, 5)
+
+    def setAreaDesc(self, areaDesc):
+        &#39;&#39;&#39;Set the areaDesc of the area. This must be a string.&#39;&#39;&#39;
+        self.areaDesc = (areaDesc, 0)
+
+    def addPolygon(self, polygon):
+        &#39;&#39;&#39;Add a polygon to the area. This must be a string.&#39;&#39;&#39;
+        self.polygon[0].append(polygon)
+
+    def removePolygon(self, polygon):
+        &#39;&#39;&#39;Remove a polygon from the area. This must be a string.&#39;&#39;&#39;
+        self.polygon[0].remove(polygon)
+
+    def addCircle(self, circle):
+        &#39;&#39;&#39;Add a circle to the area. This must be a string.&#39;&#39;&#39;
+        self.circle[0].append(circle)
+
+    def removeCircle(self, circle):
+        &#39;&#39;&#39;Remove a circle from the area. This must be a string.&#39;&#39;&#39;
+        self.circle[0].remove(circle)
+
+    def addGeocode(self, geocodeName, geocodeValue):
+        &#39;&#39;&#39;Add a geocode to the area. These must be strings.&#39;&#39;&#39;
+        self.geocode[0].append(Geocode(geocodeName, geocodeValue))
+
+    def removeGeocode(self, geocode):
+        &#39;&#39;&#39;Remove a geocode from the area. This must be a element.Geocode object.&#39;&#39;&#39;
+        self.geocode[0].remove(geocode)
+
+    def setAltitude(self, altitude):
+        &#39;&#39;&#39;Set the altitude of the area. This must be a float.&#39;&#39;&#39;
+        self.altitude = (altitude, 4)
+
+    def setCeiling(self, ceiling):
+        &#39;&#39;&#39;Set the ceiling of the area. This must be a float.&#39;&#39;&#39;
+        self.ceiling = (ceiling, 5)
+
+    def __str__(self):
+        return &#34;area&#34;</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="element.Area.addCircle"><code class="name flex">
+<span>def <span class="ident">addCircle</span></span>(<span>self, circle)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add a circle to the area. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addCircle(self, circle):
+    &#39;&#39;&#39;Add a circle to the area. This must be a string.&#39;&#39;&#39;
+    self.circle[0].append(circle)</code></pre>
+</details>
+</dd>
+<dt id="element.Area.addGeocode"><code class="name flex">
+<span>def <span class="ident">addGeocode</span></span>(<span>self, geocodeName, geocodeValue)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add a geocode to the area. These must be strings.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addGeocode(self, geocodeName, geocodeValue):
+    &#39;&#39;&#39;Add a geocode to the area. These must be strings.&#39;&#39;&#39;
+    self.geocode[0].append(Geocode(geocodeName, geocodeValue))</code></pre>
+</details>
+</dd>
+<dt id="element.Area.addPolygon"><code class="name flex">
+<span>def <span class="ident">addPolygon</span></span>(<span>self, polygon)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add a polygon to the area. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addPolygon(self, polygon):
+    &#39;&#39;&#39;Add a polygon to the area. This must be a string.&#39;&#39;&#39;
+    self.polygon[0].append(polygon)</code></pre>
+</details>
+</dd>
+<dt id="element.Area.removeCircle"><code class="name flex">
+<span>def <span class="ident">removeCircle</span></span>(<span>self, circle)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove a circle from the area. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeCircle(self, circle):
+    &#39;&#39;&#39;Remove a circle from the area. This must be a string.&#39;&#39;&#39;
+    self.circle[0].remove(circle)</code></pre>
+</details>
+</dd>
+<dt id="element.Area.removeGeocode"><code class="name flex">
+<span>def <span class="ident">removeGeocode</span></span>(<span>self, geocode)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove a geocode from the area. This must be a element.Geocode object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeGeocode(self, geocode):
+    &#39;&#39;&#39;Remove a geocode from the area. This must be a element.Geocode object.&#39;&#39;&#39;
+    self.geocode[0].remove(geocode)</code></pre>
+</details>
+</dd>
+<dt id="element.Area.removePolygon"><code class="name flex">
+<span>def <span class="ident">removePolygon</span></span>(<span>self, polygon)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove a polygon from the area. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removePolygon(self, polygon):
+    &#39;&#39;&#39;Remove a polygon from the area. This must be a string.&#39;&#39;&#39;
+    self.polygon[0].remove(polygon)</code></pre>
+</details>
+</dd>
+<dt id="element.Area.setAltitude"><code class="name flex">
+<span>def <span class="ident">setAltitude</span></span>(<span>self, altitude)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the altitude of the area. This must be a float.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setAltitude(self, altitude):
+    &#39;&#39;&#39;Set the altitude of the area. This must be a float.&#39;&#39;&#39;
+    self.altitude = (altitude, 4)</code></pre>
+</details>
+</dd>
+<dt id="element.Area.setAreaDesc"><code class="name flex">
+<span>def <span class="ident">setAreaDesc</span></span>(<span>self, areaDesc)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the areaDesc of the area. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setAreaDesc(self, areaDesc):
+    &#39;&#39;&#39;Set the areaDesc of the area. This must be a string.&#39;&#39;&#39;
+    self.areaDesc = (areaDesc, 0)</code></pre>
+</details>
+</dd>
+<dt id="element.Area.setCeiling"><code class="name flex">
+<span>def <span class="ident">setCeiling</span></span>(<span>self, ceiling)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the ceiling of the area. This must be a float.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setCeiling(self, ceiling):
+    &#39;&#39;&#39;Set the ceiling of the area. This must be a float.&#39;&#39;&#39;
+    self.ceiling = (ceiling, 5)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="element.EventCode"><code class="flex name class">
+<span>class <span class="ident">EventCode</span></span>
+<span>(</span><span>eventName=None, eventValue=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Initialize an eventCode object. These must be strings.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class EventCode(object):
+    def __init__(self, eventName=None, eventValue=None):
+        &#39;&#39;&#39;Initialize an eventCode object. These must be strings.&#39;&#39;&#39;
+        self.valueName = (eventName, 0)
+        self.value = (eventValue, 1)
+
+    def setEventName(self, eventName):
+        &#39;&#39;&#39;Set the eventName of the eventCode. This must be a string.&#39;&#39;&#39;
+        self.eventName = (eventName, 0)
+
+    def getEventName(self):
+        &#39;&#39;&#39;Get the eventName of the eventCode.&#39;&#39;&#39;
+        return self.eventName[0]
+
+    def setEventValue(self, eventValue):
+        &#39;&#39;&#39;Set the eventValue of the eventCode. This must be a string.&#39;&#39;&#39;
+        self.eventValue = (eventValue, 1)
+
+    def getEventValue(self):
+        &#39;&#39;&#39;Get the eventValue of the eventCode.&#39;&#39;&#39;
+        return self.eventValue[0]
+
+    def __str__(self):
+        return &#34;eventCode&#34;</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="element.EventCode.getEventName"><code class="name flex">
+<span>def <span class="ident">getEventName</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the eventName of the eventCode.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getEventName(self):
+    &#39;&#39;&#39;Get the eventName of the eventCode.&#39;&#39;&#39;
+    return self.eventName[0]</code></pre>
+</details>
+</dd>
+<dt id="element.EventCode.getEventValue"><code class="name flex">
+<span>def <span class="ident">getEventValue</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the eventValue of the eventCode.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getEventValue(self):
+    &#39;&#39;&#39;Get the eventValue of the eventCode.&#39;&#39;&#39;
+    return self.eventValue[0]</code></pre>
+</details>
+</dd>
+<dt id="element.EventCode.setEventName"><code class="name flex">
+<span>def <span class="ident">setEventName</span></span>(<span>self, eventName)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the eventName of the eventCode. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setEventName(self, eventName):
+    &#39;&#39;&#39;Set the eventName of the eventCode. This must be a string.&#39;&#39;&#39;
+    self.eventName = (eventName, 0)</code></pre>
+</details>
+</dd>
+<dt id="element.EventCode.setEventValue"><code class="name flex">
+<span>def <span class="ident">setEventValue</span></span>(<span>self, eventValue)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the eventValue of the eventCode. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setEventValue(self, eventValue):
+    &#39;&#39;&#39;Set the eventValue of the eventCode. This must be a string.&#39;&#39;&#39;
+    self.eventValue = (eventValue, 1)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="element.Geocode"><code class="flex name class">
+<span>class <span class="ident">Geocode</span></span>
+<span>(</span><span>geocodeName=None, geocodeValue=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Initialize a geocode object with a geocodeName and geocodeValue. These must be strings.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Geocode(object):
+    def __init__(self, geocodeName=None, geocodeValue=None):
+        &#39;&#39;&#39;Initialize a geocode object with a geocodeName and geocodeValue. These must be strings.&#39;&#39;&#39;
+        self.valueName = (geocodeName, 0)
+        self.value = (geocodeValue, 1)
+
+    def setGeocodeName(self, geocodeName):
+        &#39;&#39;&#39;Set the geocodeName of the geocode. This must be a string.&#39;&#39;&#39;
+        self.geocodeName = (geocodeName, 0)
+
+    def setGeocodeValue(self, geocodeValue):
+        &#39;&#39;&#39;Set the geocodeValue of the geocode. This must be a string.&#39;&#39;&#39;
+        self.geocodeValue = (geocodeValue, 1)
+
+    def __str__(self):
+        return &#34;geocode&#34;</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="element.Geocode.setGeocodeName"><code class="name flex">
+<span>def <span class="ident">setGeocodeName</span></span>(<span>self, geocodeName)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the geocodeName of the geocode. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setGeocodeName(self, geocodeName):
+    &#39;&#39;&#39;Set the geocodeName of the geocode. This must be a string.&#39;&#39;&#39;
+    self.geocodeName = (geocodeName, 0)</code></pre>
+</details>
+</dd>
+<dt id="element.Geocode.setGeocodeValue"><code class="name flex">
+<span>def <span class="ident">setGeocodeValue</span></span>(<span>self, geocodeValue)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the geocodeValue of the geocode. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setGeocodeValue(self, geocodeValue):
+    &#39;&#39;&#39;Set the geocodeValue of the geocode. This must be a string.&#39;&#39;&#39;
+    self.geocodeValue = (geocodeValue, 1)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="element.Info"><code class="flex name class">
+<span>class <span class="ident">Info</span></span>
+<span>(</span><span>category=[&lt;Category.Other: 12&gt;], event='CAPParser Default Event', urgency=Urgency.Immediate, severity=Severity.Severe, certainty=Certainty.Observed)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Initialize an Info object. The language must be a string. The category, urgency, severity, and certainty must be enums. If no parameters are given, the default values will be used.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Info(object):
+    def __init__(self, category=[enums.Category.Other], event=&#34;CAPParser Default Event&#34;, urgency=enums.Urgency.Immediate, severity=enums.Severity.Severe, certainty=enums.Certainty.Observed):
+        &#39;&#39;&#39;Initialize an Info object. The language must be a string. The category, urgency, severity, and certainty must be enums. If no parameters are given, the default values will be used.&#39;&#39;&#39;
+        self.language = (None, 0)
+        self.category = ([], 1)  
+        self.event = (event, 2)  
+        self.responseType = ([], 3)
+        self.urgency = (urgency, 4)    
+        self.severity = (severity, 5)   
+        self.certainty = (certainty, 6)  
+        self.audience = (None, 7)
+        self.eventCode = ([], 8)
+        self.effective = (None, 9)
+        self.onset = (None, 10)
+        self.expires = (None, 11)
+        self.senderName = (None, 12)
+        self.headline = (None, 13)
+        self.description = (None, 14)
+        self.instruction = (None, 15)
+        self.web = (None, 16)
+        self.contact = (None, 17)
+        self.parameter = ([], 18)
+        self.resource = ([], 19)
+        self.area = ([], 20)
+
+    def setLanguage(self, language):
+        &#39;&#39;&#39;Set the language of the info. This must be a string.&#39;&#39;&#39;
+        if not isinstance(language, str):
+            return None
+        self.language = (language, 0)
+
+    def getLanguage(self):
+        &#39;&#39;&#39;Get the language of the info.&#39;&#39;&#39;
+        return self.language[0]
+
+    def addCategory(self, category):
+        &#39;&#39;&#39;Add a category to the info. This must be an enum.Category object.&#39;&#39;&#39;
+        if not isinstance(category, enums.Category):
+            return None
+        self.category[0].append(category)
+
+    def removeCategory(self, category):
+        &#39;&#39;&#39;Remove a category of the info. This must be an enum.Category object. If the category is the only one, it will be replaced with &#34;Other&#34;.&#39;&#39;&#39;
+        if not isinstance(category, enums.Category):
+            return None
+        self.category[0].remove(category)
+        if len(self.category[0]) == 0:
+            self.category[0].append(enums.Category.Other)
+        
+    def getCategories(self):
+        &#39;&#39;&#39;Get the categories of the info.&#39;&#39;&#39;
+        return self.category[0]
+
+    def setEvent(self, event):
+        &#39;&#39;&#39;Set the event of the info. This must be a string.&#39;&#39;&#39;
+        if isinstance(event, str):
+            return None
+        self.event = (event, 2)
+
+    def getEvent(self):
+        &#39;&#39;&#39;Get the event of the info.&#39;&#39;&#39;
+        return self.event[0]
+
+    def addResponseType(self, responseType):
+        &#39;&#39;&#39;Add a responseType to the info. This must be an enum.ResponseType object.&#39;&#39;&#39;
+        if not isinstance(responseType, enums.ResponseType):
+            return None
+        self.responseType[0].append(responseType)
+
+    def removeResponseType(self, responseType):
+        &#39;&#39;&#39;Remove a responseType of the info. This must be an enum.ResponseType object.&#39;&#39;&#39;
+        if not isinstance(responseType, enums.ResponseType):
+            return None
+        self.responseType[0].remove(responseType)
+
+    def getResponseTypes(self):
+        &#39;&#39;&#39;Get the responseTypes of the info.&#39;&#39;&#39;
+        return self.responseType[0]
+
+    def setUrgency(self, urgency):
+        &#39;&#39;&#39;Set the urgency of the info. This must be an enum.Urgency object.&#39;&#39;&#39;
+        if not isinstance(urgency, enums.Urgency):
+            return None
+        self.urgency = (urgency, 4)
+
+    def getUrgency(self):
+        &#39;&#39;&#39;Get the urgency of the info.&#39;&#39;&#39;
+        return self.urgency[0]
+
+    def setSeverity(self, severity):
+        &#39;&#39;&#39;Set the severity of the info. This must be an enum.Severity object.&#39;&#39;&#39;
+        if not isinstance(severity, enums.Severity):
+            return None
+        self.severity = (severity, 5)
+
+    def getSeverity(self):
+        &#39;&#39;&#39;Get the severity of the info.&#39;&#39;&#39;
+        return self.severity[0]
+
+    def setCertainty(self, certainty):
+        &#39;&#39;&#39;Set the certainty of the info. This must be an enum.Certainty object.&#39;&#39;&#39;
+        if not isinstance(certainty, enums.Certainty):
+            return None
+        self.certainty = (certainty, 6)
+
+    def getCertainty(self):
+        &#39;&#39;&#39;Get the certainty of the info.&#39;&#39;&#39;
+        return self.certainty[0]
+
+    def setAudience(self, audience):
+        &#39;&#39;&#39;Set the audience of the info. This must be a string.&#39;&#39;&#39;
+        self.audience = (audience, 7)
+
+    def getAudience(self):
+        &#39;&#39;&#39;Get the audience of the info.&#39;&#39;&#39;
+        return self.audience[0]
+
+    def addEventCode(self, eventName, eventValue):
+        &#39;&#39;&#39;Add an eventCode to the info. These must be strings.&#39;&#39;&#39;
+        self.eventCode[0].append(EventCode(eventName, eventValue))
+
+    def removeEventCode(self, eventCode):
+        &#39;&#39;&#39;Remove an eventCode of the info. This must be an element.EventCode object.&#39;&#39;&#39;
+        self.eventCode[0].remove(eventCode)
+
+    def getEventCodes(self):
+        &#39;&#39;&#39;Get the eventCodes of the info.&#39;&#39;&#39;
+        return self.eventCode[0]
+
+    def setEffective(self, dateTime):
+        &#39;&#39;&#39;Set the effective of the info. This must be a datetime object.&#39;&#39;&#39;
+        self.effective = dateTime.astimezone(
+            timezone.utc).isoformat(timespec=&#39;seconds&#39;)
+
+    def getEffective(self):
+        &#39;&#39;&#39;Get the effective of the info.&#39;&#39;&#39;
+        return self.effective[0]
+
+    def setOnset(self, dateTime):
+        &#39;&#39;&#39;Set the onset of the info. This must be a datetime object.&#39;&#39;&#39;
+        self.onset = dateTime.astimezone(
+            timezone.utc).isoformat(timespec=&#39;seconds&#39;)
+
+    def getOnset(self):
+        &#39;&#39;&#39;Get the onset of the info.&#39;&#39;&#39;
+        return self.onset[0]
+
+    def setExpires(self, dateTime):
+        &#39;&#39;&#39;Set the expires of the info. This must be a datetime object.&#39;&#39;&#39;
+        self.expires = dateTime.astimezone(
+            timezone.utc).isoformat(timespec=&#39;seconds&#39;)
+
+    def getExpires(self):
+        &#39;&#39;&#39;Get the expires of the info.&#39;&#39;&#39;
+        return self.expires[0]
+
+    def setSenderName(self, senderName):
+        &#39;&#39;&#39;Set the senderName of the info. This must be a string.&#39;&#39;&#39;
+        self.senderName = (senderName, 12)
+
+    def getSenderName(self):
+        &#39;&#39;&#39;Get the senderName of the info.&#39;&#39;&#39;
+        return self.senderName[0]
+
+    def setHeadline(self, headline):
+        &#39;&#39;&#39;Set the headline of the info. This must be a string. The headline will be truncated to 160 characters.&#39;&#39;&#39;
+        self.headline = (headline[:160], 13)
+
+    def getHeadline(self):
+        return self.headline[0]
+
+    def setDescription(self, description):
+        &#39;&#39;&#39;Set the description of the info. This must be a string.&#39;&#39;&#39;
+        self.description = (description, 14)
+
+    def getDescription(self):
+        &#39;&#39;&#39;Get the description of the info.&#39;&#39;&#39;
+        return self.description[0]
+
+    def setInstruction(self, instruction):
+        &#39;&#39;&#39;Set the instruction of the info. This must be a string.&#39;&#39;&#39;
+        self.instruction = (instruction, 15)
+
+    def getInstruction(self):
+        &#39;&#39;&#39;Get the instruction of the info.&#39;&#39;&#39;
+        return self.instruction[0]
+
+    def setWeb(self, url):
+        &#39;&#39;&#39;Set the web of the info. This must be a string. It must start with http:// or https://&#39;&#39;&#39;
+        if not re.match(&#39;^https?://.+$&#39;, url):
+            return None
+        self.web = (url, 16)
+
+    def getWeb(self):
+        &#39;&#39;&#39;Get the web of the info.&#39;&#39;&#39;
+        return self.web[0]
+
+    def setContact(self, contact):
+        &#39;&#39;&#39;Set the contact of the info. This must be a string.&#39;&#39;&#39;
+        self.contact = (contact, 17)
+
+    def getContact(self):
+        &#39;&#39;&#39;Get the contact of the info.&#39;&#39;&#39;
+        return self.contact[0]
+
+    def addParameter(self, parameter):
+        &#39;&#39;&#39;Add a parameter to the info. This must be an element.Parameter object.&#39;&#39;&#39;
+        self.parameter[0].append(parameter)
+
+    def removeParameter(self, parameter):
+        &#39;&#39;&#39;Remove a parameter of the info. This must be an element.Parameter object.&#39;&#39;&#39;
+        self.parameter[0].remove(parameter)
+
+    def getParameters(self):
+        &#39;&#39;&#39;Get the parameters of the info.&#39;&#39;&#39;
+        return self.parameter[0]
+
+    def addResource(self, resource):
+        &#39;&#39;&#39;Add a resource to the info. This must be an element.Resource object.&#39;&#39;&#39;
+        self.resource[0].append(resource)
+
+    def removeResource(self, resource):
+        &#39;&#39;&#39;Remove a resource of the info. This must be an element.Resource object.&#39;&#39;&#39;
+        self.resource[0].remove(resource)
+
+    def getResources(self):
+        &#39;&#39;&#39;Get the resources of the info.&#39;&#39;&#39;
+        return self.resource[0]
+
+    def addArea(self, areaareaDesc):
+        &#39;&#39;&#39;Add an area to the info. This must be an element.Area object.&#39;&#39;&#39;
+        self.area[0].append(area)
+
+    def removeArea(self, area):
+        &#39;&#39;&#39;Remove an area of the info. This must be an element.Area object.&#39;&#39;&#39;
+        self.area[0].remove(area)
+
+    def getAreas(self):
+        &#39;&#39;&#39;Get the areas of the info.&#39;&#39;&#39;
+        return self.area[0]
+
+    def __str__(self):
+        return &#34;info&#34;</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="element.Info.addArea"><code class="name flex">
+<span>def <span class="ident">addArea</span></span>(<span>self, areaareaDesc)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add an area to the info. This must be an element.Area object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addArea(self, areaareaDesc):
+    &#39;&#39;&#39;Add an area to the info. This must be an element.Area object.&#39;&#39;&#39;
+    self.area[0].append(area)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.addCategory"><code class="name flex">
+<span>def <span class="ident">addCategory</span></span>(<span>self, category)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add a category to the info. This must be an enum.Category object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addCategory(self, category):
+    &#39;&#39;&#39;Add a category to the info. This must be an enum.Category object.&#39;&#39;&#39;
+    if not isinstance(category, enums.Category):
+        return None
+    self.category[0].append(category)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.addEventCode"><code class="name flex">
+<span>def <span class="ident">addEventCode</span></span>(<span>self, eventName, eventValue)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add an eventCode to the info. These must be strings.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addEventCode(self, eventName, eventValue):
+    &#39;&#39;&#39;Add an eventCode to the info. These must be strings.&#39;&#39;&#39;
+    self.eventCode[0].append(EventCode(eventName, eventValue))</code></pre>
+</details>
+</dd>
+<dt id="element.Info.addParameter"><code class="name flex">
+<span>def <span class="ident">addParameter</span></span>(<span>self, parameter)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add a parameter to the info. This must be an element.Parameter object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addParameter(self, parameter):
+    &#39;&#39;&#39;Add a parameter to the info. This must be an element.Parameter object.&#39;&#39;&#39;
+    self.parameter[0].append(parameter)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.addResource"><code class="name flex">
+<span>def <span class="ident">addResource</span></span>(<span>self, resource)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add a resource to the info. This must be an element.Resource object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addResource(self, resource):
+    &#39;&#39;&#39;Add a resource to the info. This must be an element.Resource object.&#39;&#39;&#39;
+    self.resource[0].append(resource)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.addResponseType"><code class="name flex">
+<span>def <span class="ident">addResponseType</span></span>(<span>self, responseType)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add a responseType to the info. This must be an enum.ResponseType object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def addResponseType(self, responseType):
+    &#39;&#39;&#39;Add a responseType to the info. This must be an enum.ResponseType object.&#39;&#39;&#39;
+    if not isinstance(responseType, enums.ResponseType):
+        return None
+    self.responseType[0].append(responseType)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getAreas"><code class="name flex">
+<span>def <span class="ident">getAreas</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the areas of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getAreas(self):
+    &#39;&#39;&#39;Get the areas of the info.&#39;&#39;&#39;
+    return self.area[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getAudience"><code class="name flex">
+<span>def <span class="ident">getAudience</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the audience of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getAudience(self):
+    &#39;&#39;&#39;Get the audience of the info.&#39;&#39;&#39;
+    return self.audience[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getCategories"><code class="name flex">
+<span>def <span class="ident">getCategories</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the categories of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getCategories(self):
+    &#39;&#39;&#39;Get the categories of the info.&#39;&#39;&#39;
+    return self.category[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getCertainty"><code class="name flex">
+<span>def <span class="ident">getCertainty</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the certainty of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getCertainty(self):
+    &#39;&#39;&#39;Get the certainty of the info.&#39;&#39;&#39;
+    return self.certainty[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getContact"><code class="name flex">
+<span>def <span class="ident">getContact</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the contact of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getContact(self):
+    &#39;&#39;&#39;Get the contact of the info.&#39;&#39;&#39;
+    return self.contact[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getDescription"><code class="name flex">
+<span>def <span class="ident">getDescription</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the description of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getDescription(self):
+    &#39;&#39;&#39;Get the description of the info.&#39;&#39;&#39;
+    return self.description[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getEffective"><code class="name flex">
+<span>def <span class="ident">getEffective</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the effective of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getEffective(self):
+    &#39;&#39;&#39;Get the effective of the info.&#39;&#39;&#39;
+    return self.effective[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getEvent"><code class="name flex">
+<span>def <span class="ident">getEvent</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the event of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getEvent(self):
+    &#39;&#39;&#39;Get the event of the info.&#39;&#39;&#39;
+    return self.event[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getEventCodes"><code class="name flex">
+<span>def <span class="ident">getEventCodes</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the eventCodes of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getEventCodes(self):
+    &#39;&#39;&#39;Get the eventCodes of the info.&#39;&#39;&#39;
+    return self.eventCode[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getExpires"><code class="name flex">
+<span>def <span class="ident">getExpires</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the expires of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getExpires(self):
+    &#39;&#39;&#39;Get the expires of the info.&#39;&#39;&#39;
+    return self.expires[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getHeadline"><code class="name flex">
+<span>def <span class="ident">getHeadline</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getHeadline(self):
+    return self.headline[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getInstruction"><code class="name flex">
+<span>def <span class="ident">getInstruction</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the instruction of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getInstruction(self):
+    &#39;&#39;&#39;Get the instruction of the info.&#39;&#39;&#39;
+    return self.instruction[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getLanguage"><code class="name flex">
+<span>def <span class="ident">getLanguage</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the language of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getLanguage(self):
+    &#39;&#39;&#39;Get the language of the info.&#39;&#39;&#39;
+    return self.language[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getOnset"><code class="name flex">
+<span>def <span class="ident">getOnset</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the onset of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getOnset(self):
+    &#39;&#39;&#39;Get the onset of the info.&#39;&#39;&#39;
+    return self.onset[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getParameters"><code class="name flex">
+<span>def <span class="ident">getParameters</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the parameters of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getParameters(self):
+    &#39;&#39;&#39;Get the parameters of the info.&#39;&#39;&#39;
+    return self.parameter[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getResources"><code class="name flex">
+<span>def <span class="ident">getResources</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the resources of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getResources(self):
+    &#39;&#39;&#39;Get the resources of the info.&#39;&#39;&#39;
+    return self.resource[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getResponseTypes"><code class="name flex">
+<span>def <span class="ident">getResponseTypes</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the responseTypes of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getResponseTypes(self):
+    &#39;&#39;&#39;Get the responseTypes of the info.&#39;&#39;&#39;
+    return self.responseType[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getSenderName"><code class="name flex">
+<span>def <span class="ident">getSenderName</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the senderName of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getSenderName(self):
+    &#39;&#39;&#39;Get the senderName of the info.&#39;&#39;&#39;
+    return self.senderName[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getSeverity"><code class="name flex">
+<span>def <span class="ident">getSeverity</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the severity of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getSeverity(self):
+    &#39;&#39;&#39;Get the severity of the info.&#39;&#39;&#39;
+    return self.severity[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getUrgency"><code class="name flex">
+<span>def <span class="ident">getUrgency</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the urgency of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getUrgency(self):
+    &#39;&#39;&#39;Get the urgency of the info.&#39;&#39;&#39;
+    return self.urgency[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.getWeb"><code class="name flex">
+<span>def <span class="ident">getWeb</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the web of the info.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getWeb(self):
+    &#39;&#39;&#39;Get the web of the info.&#39;&#39;&#39;
+    return self.web[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Info.removeArea"><code class="name flex">
+<span>def <span class="ident">removeArea</span></span>(<span>self, area)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove an area of the info. This must be an element.Area object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeArea(self, area):
+    &#39;&#39;&#39;Remove an area of the info. This must be an element.Area object.&#39;&#39;&#39;
+    self.area[0].remove(area)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.removeCategory"><code class="name flex">
+<span>def <span class="ident">removeCategory</span></span>(<span>self, category)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove a category of the info. This must be an enum.Category object. If the category is the only one, it will be replaced with "Other".</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeCategory(self, category):
+    &#39;&#39;&#39;Remove a category of the info. This must be an enum.Category object. If the category is the only one, it will be replaced with &#34;Other&#34;.&#39;&#39;&#39;
+    if not isinstance(category, enums.Category):
+        return None
+    self.category[0].remove(category)
+    if len(self.category[0]) == 0:
+        self.category[0].append(enums.Category.Other)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.removeEventCode"><code class="name flex">
+<span>def <span class="ident">removeEventCode</span></span>(<span>self, eventCode)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove an eventCode of the info. This must be an element.EventCode object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeEventCode(self, eventCode):
+    &#39;&#39;&#39;Remove an eventCode of the info. This must be an element.EventCode object.&#39;&#39;&#39;
+    self.eventCode[0].remove(eventCode)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.removeParameter"><code class="name flex">
+<span>def <span class="ident">removeParameter</span></span>(<span>self, parameter)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove a parameter of the info. This must be an element.Parameter object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeParameter(self, parameter):
+    &#39;&#39;&#39;Remove a parameter of the info. This must be an element.Parameter object.&#39;&#39;&#39;
+    self.parameter[0].remove(parameter)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.removeResource"><code class="name flex">
+<span>def <span class="ident">removeResource</span></span>(<span>self, resource)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove a resource of the info. This must be an element.Resource object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeResource(self, resource):
+    &#39;&#39;&#39;Remove a resource of the info. This must be an element.Resource object.&#39;&#39;&#39;
+    self.resource[0].remove(resource)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.removeResponseType"><code class="name flex">
+<span>def <span class="ident">removeResponseType</span></span>(<span>self, responseType)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove a responseType of the info. This must be an enum.ResponseType object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def removeResponseType(self, responseType):
+    &#39;&#39;&#39;Remove a responseType of the info. This must be an enum.ResponseType object.&#39;&#39;&#39;
+    if not isinstance(responseType, enums.ResponseType):
+        return None
+    self.responseType[0].remove(responseType)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.setAudience"><code class="name flex">
+<span>def <span class="ident">setAudience</span></span>(<span>self, audience)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the audience of the info. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setAudience(self, audience):
+    &#39;&#39;&#39;Set the audience of the info. This must be a string.&#39;&#39;&#39;
+    self.audience = (audience, 7)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.setCertainty"><code class="name flex">
+<span>def <span class="ident">setCertainty</span></span>(<span>self, certainty)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the certainty of the info. This must be an enum.Certainty object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setCertainty(self, certainty):
+    &#39;&#39;&#39;Set the certainty of the info. This must be an enum.Certainty object.&#39;&#39;&#39;
+    if not isinstance(certainty, enums.Certainty):
+        return None
+    self.certainty = (certainty, 6)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.setContact"><code class="name flex">
+<span>def <span class="ident">setContact</span></span>(<span>self, contact)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the contact of the info. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setContact(self, contact):
+    &#39;&#39;&#39;Set the contact of the info. This must be a string.&#39;&#39;&#39;
+    self.contact = (contact, 17)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.setDescription"><code class="name flex">
+<span>def <span class="ident">setDescription</span></span>(<span>self, description)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the description of the info. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setDescription(self, description):
+    &#39;&#39;&#39;Set the description of the info. This must be a string.&#39;&#39;&#39;
+    self.description = (description, 14)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.setEffective"><code class="name flex">
+<span>def <span class="ident">setEffective</span></span>(<span>self, dateTime)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the effective of the info. This must be a datetime object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setEffective(self, dateTime):
+    &#39;&#39;&#39;Set the effective of the info. This must be a datetime object.&#39;&#39;&#39;
+    self.effective = dateTime.astimezone(
+        timezone.utc).isoformat(timespec=&#39;seconds&#39;)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.setEvent"><code class="name flex">
+<span>def <span class="ident">setEvent</span></span>(<span>self, event)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the event of the info. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setEvent(self, event):
+    &#39;&#39;&#39;Set the event of the info. This must be a string.&#39;&#39;&#39;
+    if isinstance(event, str):
+        return None
+    self.event = (event, 2)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.setExpires"><code class="name flex">
+<span>def <span class="ident">setExpires</span></span>(<span>self, dateTime)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the expires of the info. This must be a datetime object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setExpires(self, dateTime):
+    &#39;&#39;&#39;Set the expires of the info. This must be a datetime object.&#39;&#39;&#39;
+    self.expires = dateTime.astimezone(
+        timezone.utc).isoformat(timespec=&#39;seconds&#39;)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.setHeadline"><code class="name flex">
+<span>def <span class="ident">setHeadline</span></span>(<span>self, headline)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the headline of the info. This must be a string. The headline will be truncated to 160 characters.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setHeadline(self, headline):
+    &#39;&#39;&#39;Set the headline of the info. This must be a string. The headline will be truncated to 160 characters.&#39;&#39;&#39;
+    self.headline = (headline[:160], 13)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.setInstruction"><code class="name flex">
+<span>def <span class="ident">setInstruction</span></span>(<span>self, instruction)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the instruction of the info. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setInstruction(self, instruction):
+    &#39;&#39;&#39;Set the instruction of the info. This must be a string.&#39;&#39;&#39;
+    self.instruction = (instruction, 15)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.setLanguage"><code class="name flex">
+<span>def <span class="ident">setLanguage</span></span>(<span>self, language)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the language of the info. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setLanguage(self, language):
+    &#39;&#39;&#39;Set the language of the info. This must be a string.&#39;&#39;&#39;
+    if not isinstance(language, str):
+        return None
+    self.language = (language, 0)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.setOnset"><code class="name flex">
+<span>def <span class="ident">setOnset</span></span>(<span>self, dateTime)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the onset of the info. This must be a datetime object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setOnset(self, dateTime):
+    &#39;&#39;&#39;Set the onset of the info. This must be a datetime object.&#39;&#39;&#39;
+    self.onset = dateTime.astimezone(
+        timezone.utc).isoformat(timespec=&#39;seconds&#39;)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.setSenderName"><code class="name flex">
+<span>def <span class="ident">setSenderName</span></span>(<span>self, senderName)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the senderName of the info. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setSenderName(self, senderName):
+    &#39;&#39;&#39;Set the senderName of the info. This must be a string.&#39;&#39;&#39;
+    self.senderName = (senderName, 12)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.setSeverity"><code class="name flex">
+<span>def <span class="ident">setSeverity</span></span>(<span>self, severity)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the severity of the info. This must be an enum.Severity object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setSeverity(self, severity):
+    &#39;&#39;&#39;Set the severity of the info. This must be an enum.Severity object.&#39;&#39;&#39;
+    if not isinstance(severity, enums.Severity):
+        return None
+    self.severity = (severity, 5)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.setUrgency"><code class="name flex">
+<span>def <span class="ident">setUrgency</span></span>(<span>self, urgency)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the urgency of the info. This must be an enum.Urgency object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setUrgency(self, urgency):
+    &#39;&#39;&#39;Set the urgency of the info. This must be an enum.Urgency object.&#39;&#39;&#39;
+    if not isinstance(urgency, enums.Urgency):
+        return None
+    self.urgency = (urgency, 4)</code></pre>
+</details>
+</dd>
+<dt id="element.Info.setWeb"><code class="name flex">
+<span>def <span class="ident">setWeb</span></span>(<span>self, url)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the web of the info. This must be a string. It must start with http:// or https://</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setWeb(self, url):
+    &#39;&#39;&#39;Set the web of the info. This must be a string. It must start with http:// or https://&#39;&#39;&#39;
+    if not re.match(&#39;^https?://.+$&#39;, url):
+        return None
+    self.web = (url, 16)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="element.Parameter"><code class="flex name class">
+<span>class <span class="ident">Parameter</span></span>
+<span>(</span><span>parameterName=None, parameterValue=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Initialize a parameter object. These must be strings.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Parameter(object):
+    def __init__(self, parameterName=None, parameterValue=None):
+        &#39;&#39;&#39;Initialize a parameter object. These must be strings.&#39;&#39;&#39;
+        self.valueName = (parameterName, 0)
+        self.value = (parameterValue, 1)
+
+    def setParameterName(self, parameterName):
+        &#39;&#39;&#39;Set the parameterName of the parameter. This must be a string.&#39;&#39;&#39;
+        self.parameterName = (parameterName, 0)
+
+    def getParameterName(self):
+        &#39;&#39;&#39;Get the parameterName of the parameter.&#39;&#39;&#39;
+        return self.parameterName[0]
+
+    def setParameterValue(self, parameterValue):
+        &#39;&#39;&#39;Set the parameterValue of the parameter. This must be a string.&#39;&#39;&#39;
+        self.parameterValue = (parameterValue, 1)
+
+    def getParameterValue(self):
+        &#39;&#39;&#39;Get the parameterValue of the parameter.&#39;&#39;&#39;
+        return self.parameterValue[0]
+
+    def __str__(self):
+        return &#34;parameter&#34;</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="element.Parameter.getParameterName"><code class="name flex">
+<span>def <span class="ident">getParameterName</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the parameterName of the parameter.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getParameterName(self):
+    &#39;&#39;&#39;Get the parameterName of the parameter.&#39;&#39;&#39;
+    return self.parameterName[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Parameter.getParameterValue"><code class="name flex">
+<span>def <span class="ident">getParameterValue</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the parameterValue of the parameter.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getParameterValue(self):
+    &#39;&#39;&#39;Get the parameterValue of the parameter.&#39;&#39;&#39;
+    return self.parameterValue[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Parameter.setParameterName"><code class="name flex">
+<span>def <span class="ident">setParameterName</span></span>(<span>self, parameterName)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the parameterName of the parameter. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setParameterName(self, parameterName):
+    &#39;&#39;&#39;Set the parameterName of the parameter. This must be a string.&#39;&#39;&#39;
+    self.parameterName = (parameterName, 0)</code></pre>
+</details>
+</dd>
+<dt id="element.Parameter.setParameterValue"><code class="name flex">
+<span>def <span class="ident">setParameterValue</span></span>(<span>self, parameterValue)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the parameterValue of the parameter. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setParameterValue(self, parameterValue):
+    &#39;&#39;&#39;Set the parameterValue of the parameter. This must be a string.&#39;&#39;&#39;
+    self.parameterValue = (parameterValue, 1)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="element.Resource"><code class="flex name class">
+<span>class <span class="ident">Resource</span></span>
+<span>(</span><span>resourceDesc=None, resourceMimeType=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Initialize a resource object. These must be strings.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Resource(object):
+    def __init__(self, resourceDesc=None, resourceMimeType=None):
+        &#39;&#39;&#39;Initialize a resource object. These must be strings.&#39;&#39;&#39;
+        self.resourceDesc = (resourceDesc, 0)   
+        self.mimeType = (resourceMimeType, 1)   
+        self.size = (None, 2)
+        self.uri = (None, 3)
+        self.derefUri = (None, 4)
+        self.digest = (None, 5)
+
+    def setResourceDesc(self, resourceDesc):
+        &#39;&#39;&#39;Set the resourceDesc of the resource. This must be a string.&#39;&#39;&#39;
+        self.resourceDesc = (resourceDesc, 0)
+
+    def getResourceDesc(self):
+        &#39;&#39;&#39;Get the resourceDesc of the resource.&#39;&#39;&#39;
+        return self.resourceDesc[0]
+
+    def setMimeType(self, resourceMimeType):
+        &#39;&#39;&#39;Set the mimeType of the resource. This must be a string.&#39;&#39;&#39;
+        self.mimeType = (resourceMimeType, 1)
+
+    def getMimeType(self):
+        &#39;&#39;&#39;Get the mimeType of the resource.&#39;&#39;&#39;
+        return self.mimeType[0]
+
+    def setSize(self, size):
+        &#39;&#39;&#39;Set the size of the resource. This must be a integer.&#39;&#39;&#39;
+        self.size = (size, 2)
+
+    def getSize(self):
+        &#39;&#39;&#39;Get the size of the resource.&#39;&#39;&#39;
+        return self.size[0]
+
+    def setUri(self, uri):
+        &#39;&#39;&#39;Set the uri of the resource. This must start with http:// or https://&#39;&#39;&#39;
+        if not re.match(&#39;^https?://.+$&#39;, uri):
+            return None
+        self.uri = (uri, 3)
+
+    def getUri(self):
+        &#39;&#39;&#39;Get the uri of the resource.&#39;&#39;&#39;
+        return self.uri[0]
+
+    def setDerefUri(self, derefUri):
+        &#39;&#39;&#39;Set the derefUri of the resource. This must be a string&#39;&#39;&#39;
+        self.derefUri = (derefUri, 4)
+
+    def getDerefUri(self):
+        &#39;&#39;&#39;Get the derefUri of the resource.&#39;&#39;&#39;
+        return self.derefUri[0]
+
+    def setDigest(self, digest):
+        &#39;&#39;&#39;Set the digest of the resource. This must be a string&#39;&#39;&#39;
+        self.digest = (digest, 5)
+
+    def getDigest(self):
+        &#39;&#39;&#39;Get the digest of the resource.&#39;&#39;&#39;
+        return self.digest[0]
+
+    def __str__(self):
+        return &#34;resource&#34;</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="element.Resource.getDerefUri"><code class="name flex">
+<span>def <span class="ident">getDerefUri</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the derefUri of the resource.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getDerefUri(self):
+    &#39;&#39;&#39;Get the derefUri of the resource.&#39;&#39;&#39;
+    return self.derefUri[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Resource.getDigest"><code class="name flex">
+<span>def <span class="ident">getDigest</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the digest of the resource.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getDigest(self):
+    &#39;&#39;&#39;Get the digest of the resource.&#39;&#39;&#39;
+    return self.digest[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Resource.getMimeType"><code class="name flex">
+<span>def <span class="ident">getMimeType</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the mimeType of the resource.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getMimeType(self):
+    &#39;&#39;&#39;Get the mimeType of the resource.&#39;&#39;&#39;
+    return self.mimeType[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Resource.getResourceDesc"><code class="name flex">
+<span>def <span class="ident">getResourceDesc</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the resourceDesc of the resource.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getResourceDesc(self):
+    &#39;&#39;&#39;Get the resourceDesc of the resource.&#39;&#39;&#39;
+    return self.resourceDesc[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Resource.getSize"><code class="name flex">
+<span>def <span class="ident">getSize</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the size of the resource.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getSize(self):
+    &#39;&#39;&#39;Get the size of the resource.&#39;&#39;&#39;
+    return self.size[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Resource.getUri"><code class="name flex">
+<span>def <span class="ident">getUri</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get the uri of the resource.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getUri(self):
+    &#39;&#39;&#39;Get the uri of the resource.&#39;&#39;&#39;
+    return self.uri[0]</code></pre>
+</details>
+</dd>
+<dt id="element.Resource.setDerefUri"><code class="name flex">
+<span>def <span class="ident">setDerefUri</span></span>(<span>self, derefUri)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the derefUri of the resource. This must be a string</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setDerefUri(self, derefUri):
+    &#39;&#39;&#39;Set the derefUri of the resource. This must be a string&#39;&#39;&#39;
+    self.derefUri = (derefUri, 4)</code></pre>
+</details>
+</dd>
+<dt id="element.Resource.setDigest"><code class="name flex">
+<span>def <span class="ident">setDigest</span></span>(<span>self, digest)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the digest of the resource. This must be a string</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setDigest(self, digest):
+    &#39;&#39;&#39;Set the digest of the resource. This must be a string&#39;&#39;&#39;
+    self.digest = (digest, 5)</code></pre>
+</details>
+</dd>
+<dt id="element.Resource.setMimeType"><code class="name flex">
+<span>def <span class="ident">setMimeType</span></span>(<span>self, resourceMimeType)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the mimeType of the resource. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setMimeType(self, resourceMimeType):
+    &#39;&#39;&#39;Set the mimeType of the resource. This must be a string.&#39;&#39;&#39;
+    self.mimeType = (resourceMimeType, 1)</code></pre>
+</details>
+</dd>
+<dt id="element.Resource.setResourceDesc"><code class="name flex">
+<span>def <span class="ident">setResourceDesc</span></span>(<span>self, resourceDesc)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the resourceDesc of the resource. This must be a string.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setResourceDesc(self, resourceDesc):
+    &#39;&#39;&#39;Set the resourceDesc of the resource. This must be a string.&#39;&#39;&#39;
+    self.resourceDesc = (resourceDesc, 0)</code></pre>
+</details>
+</dd>
+<dt id="element.Resource.setSize"><code class="name flex">
+<span>def <span class="ident">setSize</span></span>(<span>self, size)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the size of the resource. This must be a integer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setSize(self, size):
+    &#39;&#39;&#39;Set the size of the resource. This must be a integer.&#39;&#39;&#39;
+    self.size = (size, 2)</code></pre>
+</details>
+</dd>
+<dt id="element.Resource.setUri"><code class="name flex">
+<span>def <span class="ident">setUri</span></span>(<span>self, uri)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the uri of the resource. This must start with http:// or https://</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setUri(self, uri):
+    &#39;&#39;&#39;Set the uri of the resource. This must start with http:// or https://&#39;&#39;&#39;
+    if not re.match(&#39;^https?://.+$&#39;, uri):
+        return None
+    self.uri = (uri, 3)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="element.Alert" href="#element.Alert">Alert</a></code></h4>
+<ul class="two-column">
+<li><code><a title="element.Alert.addAddress" href="#element.Alert.addAddress">addAddress</a></code></li>
+<li><code><a title="element.Alert.addCode" href="#element.Alert.addCode">addCode</a></code></li>
+<li><code><a title="element.Alert.addIncident" href="#element.Alert.addIncident">addIncident</a></code></li>
+<li><code><a title="element.Alert.addInfo" href="#element.Alert.addInfo">addInfo</a></code></li>
+<li><code><a title="element.Alert.addReference" href="#element.Alert.addReference">addReference</a></code></li>
+<li><code><a title="element.Alert.getAddresses" href="#element.Alert.getAddresses">getAddresses</a></code></li>
+<li><code><a title="element.Alert.getCodes" href="#element.Alert.getCodes">getCodes</a></code></li>
+<li><code><a title="element.Alert.getIdentifier" href="#element.Alert.getIdentifier">getIdentifier</a></code></li>
+<li><code><a title="element.Alert.getIncidents" href="#element.Alert.getIncidents">getIncidents</a></code></li>
+<li><code><a title="element.Alert.getInfos" href="#element.Alert.getInfos">getInfos</a></code></li>
+<li><code><a title="element.Alert.getMsgType" href="#element.Alert.getMsgType">getMsgType</a></code></li>
+<li><code><a title="element.Alert.getNote" href="#element.Alert.getNote">getNote</a></code></li>
+<li><code><a title="element.Alert.getReferences" href="#element.Alert.getReferences">getReferences</a></code></li>
+<li><code><a title="element.Alert.getRestriction" href="#element.Alert.getRestriction">getRestriction</a></code></li>
+<li><code><a title="element.Alert.getScope" href="#element.Alert.getScope">getScope</a></code></li>
+<li><code><a title="element.Alert.getSender" href="#element.Alert.getSender">getSender</a></code></li>
+<li><code><a title="element.Alert.getSent" href="#element.Alert.getSent">getSent</a></code></li>
+<li><code><a title="element.Alert.getSource" href="#element.Alert.getSource">getSource</a></code></li>
+<li><code><a title="element.Alert.getStatus" href="#element.Alert.getStatus">getStatus</a></code></li>
+<li><code><a title="element.Alert.removeAddress" href="#element.Alert.removeAddress">removeAddress</a></code></li>
+<li><code><a title="element.Alert.removeAllAddresses" href="#element.Alert.removeAllAddresses">removeAllAddresses</a></code></li>
+<li><code><a title="element.Alert.removeCode" href="#element.Alert.removeCode">removeCode</a></code></li>
+<li><code><a title="element.Alert.removeIncidnet" href="#element.Alert.removeIncidnet">removeIncidnet</a></code></li>
+<li><code><a title="element.Alert.removeInfo" href="#element.Alert.removeInfo">removeInfo</a></code></li>
+<li><code><a title="element.Alert.removeReference" href="#element.Alert.removeReference">removeReference</a></code></li>
+<li><code><a title="element.Alert.removeRestriction" href="#element.Alert.removeRestriction">removeRestriction</a></code></li>
+<li><code><a title="element.Alert.removeSource" href="#element.Alert.removeSource">removeSource</a></code></li>
+<li><code><a title="element.Alert.setIdentifier" href="#element.Alert.setIdentifier">setIdentifier</a></code></li>
+<li><code><a title="element.Alert.setMsgType" href="#element.Alert.setMsgType">setMsgType</a></code></li>
+<li><code><a title="element.Alert.setNote" href="#element.Alert.setNote">setNote</a></code></li>
+<li><code><a title="element.Alert.setRestriction" href="#element.Alert.setRestriction">setRestriction</a></code></li>
+<li><code><a title="element.Alert.setScope" href="#element.Alert.setScope">setScope</a></code></li>
+<li><code><a title="element.Alert.setSender" href="#element.Alert.setSender">setSender</a></code></li>
+<li><code><a title="element.Alert.setSent" href="#element.Alert.setSent">setSent</a></code></li>
+<li><code><a title="element.Alert.setSource" href="#element.Alert.setSource">setSource</a></code></li>
+<li><code><a title="element.Alert.setStatus" href="#element.Alert.setStatus">setStatus</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="element.Area" href="#element.Area">Area</a></code></h4>
+<ul class="two-column">
+<li><code><a title="element.Area.addCircle" href="#element.Area.addCircle">addCircle</a></code></li>
+<li><code><a title="element.Area.addGeocode" href="#element.Area.addGeocode">addGeocode</a></code></li>
+<li><code><a title="element.Area.addPolygon" href="#element.Area.addPolygon">addPolygon</a></code></li>
+<li><code><a title="element.Area.removeCircle" href="#element.Area.removeCircle">removeCircle</a></code></li>
+<li><code><a title="element.Area.removeGeocode" href="#element.Area.removeGeocode">removeGeocode</a></code></li>
+<li><code><a title="element.Area.removePolygon" href="#element.Area.removePolygon">removePolygon</a></code></li>
+<li><code><a title="element.Area.setAltitude" href="#element.Area.setAltitude">setAltitude</a></code></li>
+<li><code><a title="element.Area.setAreaDesc" href="#element.Area.setAreaDesc">setAreaDesc</a></code></li>
+<li><code><a title="element.Area.setCeiling" href="#element.Area.setCeiling">setCeiling</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="element.EventCode" href="#element.EventCode">EventCode</a></code></h4>
+<ul class="">
+<li><code><a title="element.EventCode.getEventName" href="#element.EventCode.getEventName">getEventName</a></code></li>
+<li><code><a title="element.EventCode.getEventValue" href="#element.EventCode.getEventValue">getEventValue</a></code></li>
+<li><code><a title="element.EventCode.setEventName" href="#element.EventCode.setEventName">setEventName</a></code></li>
+<li><code><a title="element.EventCode.setEventValue" href="#element.EventCode.setEventValue">setEventValue</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="element.Geocode" href="#element.Geocode">Geocode</a></code></h4>
+<ul class="">
+<li><code><a title="element.Geocode.setGeocodeName" href="#element.Geocode.setGeocodeName">setGeocodeName</a></code></li>
+<li><code><a title="element.Geocode.setGeocodeValue" href="#element.Geocode.setGeocodeValue">setGeocodeValue</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="element.Info" href="#element.Info">Info</a></code></h4>
+<ul class="two-column">
+<li><code><a title="element.Info.addArea" href="#element.Info.addArea">addArea</a></code></li>
+<li><code><a title="element.Info.addCategory" href="#element.Info.addCategory">addCategory</a></code></li>
+<li><code><a title="element.Info.addEventCode" href="#element.Info.addEventCode">addEventCode</a></code></li>
+<li><code><a title="element.Info.addParameter" href="#element.Info.addParameter">addParameter</a></code></li>
+<li><code><a title="element.Info.addResource" href="#element.Info.addResource">addResource</a></code></li>
+<li><code><a title="element.Info.addResponseType" href="#element.Info.addResponseType">addResponseType</a></code></li>
+<li><code><a title="element.Info.getAreas" href="#element.Info.getAreas">getAreas</a></code></li>
+<li><code><a title="element.Info.getAudience" href="#element.Info.getAudience">getAudience</a></code></li>
+<li><code><a title="element.Info.getCategories" href="#element.Info.getCategories">getCategories</a></code></li>
+<li><code><a title="element.Info.getCertainty" href="#element.Info.getCertainty">getCertainty</a></code></li>
+<li><code><a title="element.Info.getContact" href="#element.Info.getContact">getContact</a></code></li>
+<li><code><a title="element.Info.getDescription" href="#element.Info.getDescription">getDescription</a></code></li>
+<li><code><a title="element.Info.getEffective" href="#element.Info.getEffective">getEffective</a></code></li>
+<li><code><a title="element.Info.getEvent" href="#element.Info.getEvent">getEvent</a></code></li>
+<li><code><a title="element.Info.getEventCodes" href="#element.Info.getEventCodes">getEventCodes</a></code></li>
+<li><code><a title="element.Info.getExpires" href="#element.Info.getExpires">getExpires</a></code></li>
+<li><code><a title="element.Info.getHeadline" href="#element.Info.getHeadline">getHeadline</a></code></li>
+<li><code><a title="element.Info.getInstruction" href="#element.Info.getInstruction">getInstruction</a></code></li>
+<li><code><a title="element.Info.getLanguage" href="#element.Info.getLanguage">getLanguage</a></code></li>
+<li><code><a title="element.Info.getOnset" href="#element.Info.getOnset">getOnset</a></code></li>
+<li><code><a title="element.Info.getParameters" href="#element.Info.getParameters">getParameters</a></code></li>
+<li><code><a title="element.Info.getResources" href="#element.Info.getResources">getResources</a></code></li>
+<li><code><a title="element.Info.getResponseTypes" href="#element.Info.getResponseTypes">getResponseTypes</a></code></li>
+<li><code><a title="element.Info.getSenderName" href="#element.Info.getSenderName">getSenderName</a></code></li>
+<li><code><a title="element.Info.getSeverity" href="#element.Info.getSeverity">getSeverity</a></code></li>
+<li><code><a title="element.Info.getUrgency" href="#element.Info.getUrgency">getUrgency</a></code></li>
+<li><code><a title="element.Info.getWeb" href="#element.Info.getWeb">getWeb</a></code></li>
+<li><code><a title="element.Info.removeArea" href="#element.Info.removeArea">removeArea</a></code></li>
+<li><code><a title="element.Info.removeCategory" href="#element.Info.removeCategory">removeCategory</a></code></li>
+<li><code><a title="element.Info.removeEventCode" href="#element.Info.removeEventCode">removeEventCode</a></code></li>
+<li><code><a title="element.Info.removeParameter" href="#element.Info.removeParameter">removeParameter</a></code></li>
+<li><code><a title="element.Info.removeResource" href="#element.Info.removeResource">removeResource</a></code></li>
+<li><code><a title="element.Info.removeResponseType" href="#element.Info.removeResponseType">removeResponseType</a></code></li>
+<li><code><a title="element.Info.setAudience" href="#element.Info.setAudience">setAudience</a></code></li>
+<li><code><a title="element.Info.setCertainty" href="#element.Info.setCertainty">setCertainty</a></code></li>
+<li><code><a title="element.Info.setContact" href="#element.Info.setContact">setContact</a></code></li>
+<li><code><a title="element.Info.setDescription" href="#element.Info.setDescription">setDescription</a></code></li>
+<li><code><a title="element.Info.setEffective" href="#element.Info.setEffective">setEffective</a></code></li>
+<li><code><a title="element.Info.setEvent" href="#element.Info.setEvent">setEvent</a></code></li>
+<li><code><a title="element.Info.setExpires" href="#element.Info.setExpires">setExpires</a></code></li>
+<li><code><a title="element.Info.setHeadline" href="#element.Info.setHeadline">setHeadline</a></code></li>
+<li><code><a title="element.Info.setInstruction" href="#element.Info.setInstruction">setInstruction</a></code></li>
+<li><code><a title="element.Info.setLanguage" href="#element.Info.setLanguage">setLanguage</a></code></li>
+<li><code><a title="element.Info.setOnset" href="#element.Info.setOnset">setOnset</a></code></li>
+<li><code><a title="element.Info.setSenderName" href="#element.Info.setSenderName">setSenderName</a></code></li>
+<li><code><a title="element.Info.setSeverity" href="#element.Info.setSeverity">setSeverity</a></code></li>
+<li><code><a title="element.Info.setUrgency" href="#element.Info.setUrgency">setUrgency</a></code></li>
+<li><code><a title="element.Info.setWeb" href="#element.Info.setWeb">setWeb</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="element.Parameter" href="#element.Parameter">Parameter</a></code></h4>
+<ul class="">
+<li><code><a title="element.Parameter.getParameterName" href="#element.Parameter.getParameterName">getParameterName</a></code></li>
+<li><code><a title="element.Parameter.getParameterValue" href="#element.Parameter.getParameterValue">getParameterValue</a></code></li>
+<li><code><a title="element.Parameter.setParameterName" href="#element.Parameter.setParameterName">setParameterName</a></code></li>
+<li><code><a title="element.Parameter.setParameterValue" href="#element.Parameter.setParameterValue">setParameterValue</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="element.Resource" href="#element.Resource">Resource</a></code></h4>
+<ul class="two-column">
+<li><code><a title="element.Resource.getDerefUri" href="#element.Resource.getDerefUri">getDerefUri</a></code></li>
+<li><code><a title="element.Resource.getDigest" href="#element.Resource.getDigest">getDigest</a></code></li>
+<li><code><a title="element.Resource.getMimeType" href="#element.Resource.getMimeType">getMimeType</a></code></li>
+<li><code><a title="element.Resource.getResourceDesc" href="#element.Resource.getResourceDesc">getResourceDesc</a></code></li>
+<li><code><a title="element.Resource.getSize" href="#element.Resource.getSize">getSize</a></code></li>
+<li><code><a title="element.Resource.getUri" href="#element.Resource.getUri">getUri</a></code></li>
+<li><code><a title="element.Resource.setDerefUri" href="#element.Resource.setDerefUri">setDerefUri</a></code></li>
+<li><code><a title="element.Resource.setDigest" href="#element.Resource.setDigest">setDigest</a></code></li>
+<li><code><a title="element.Resource.setMimeType" href="#element.Resource.setMimeType">setMimeType</a></code></li>
+<li><code><a title="element.Resource.setResourceDesc" href="#element.Resource.setResourceDesc">setResourceDesc</a></code></li>
+<li><code><a title="element.Resource.setSize" href="#element.Resource.setSize">setSize</a></code></li>
+<li><code><a title="element.Resource.setUri" href="#element.Resource.setUri">setUri</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
