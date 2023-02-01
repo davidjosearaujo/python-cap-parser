@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+./capparser/__init__.py
+./capparser/capparser.py
+./capparser/element.py
+./capparser/enums.py
+capparser.egg-info/PKG-INFO
+capparser.egg-info/SOURCES.txt
+capparser.egg-info/dependency_links.txt
+capparser.egg-info/top_level.txt
