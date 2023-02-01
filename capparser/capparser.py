@@ -47,6 +47,7 @@ def _recursiveParser(parent):
     return obj
 
 def deparse(alert):
+    
     return ET.tostring(_recursiveDeparser(alert), encoding='utf8')
 
 def writeAlertToFile(alert, filePath):
@@ -55,10 +56,12 @@ def writeAlertToFile(alert, filePath):
     with open(filePath, "wb") as files:
         tree.write(files)
 
-def _recursiveDeparser(obj, outputFilePath=None):
+def _recursiveDeparser(obj):
     root = ET.Element(str(obj))
     attrs = _filterOrderAttributes(inspect.getmembers(obj))
+    
     for attr in attrs:
+        print(attr)
         if attr[0] == "xmlns":
             root.set(attr[0], attr[1][0])
         elif isinstance(attr[1][0], list):
@@ -74,6 +77,7 @@ def _recursiveDeparser(obj, outputFilePath=None):
             else:
                 child = ET.SubElement(root, attr[0])
                 child.text = attr[1][0]
+                
     return root
 
 

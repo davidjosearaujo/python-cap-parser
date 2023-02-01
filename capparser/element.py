@@ -17,7 +17,7 @@ class Alert(object):
             raise Exception("Identifier must be a string")
         if not isinstance(sender, str):
             raise Exception("Sender must be a string")
-        if not isinstance(sent, datetime) and sent != None:
+        if not isinstance(sent, str) and sent != None:
             raise Exception("Sent must be a datetime object")
         if not isinstance(status, enums.Status):
             raise Exception("Status must be a enums.Status object")
@@ -146,7 +146,7 @@ class Alert(object):
             self.addresses = ("", 9)
 
         if ' ' in address:
-            address = "\"" + address.strips() + "\""
+            address = "\"" + address.strip() + "\""
 
         if "\"CAP Default Address\"" in self.addresses[0]:
             self.addresses = (self.addresses[0].replace("\"CAP Default Address\"", ""),9)
@@ -292,7 +292,7 @@ class Info(object):
             raise Exception("Certainty must be an enums.Certainty object")
         
         self.language = (None, 0)
-        self.category = ([], 1)  
+        self.category = (category, 1)  
         self.event = (event, 2)  
         self.responseType = ([], 3)
         self.urgency = (urgency, 4)    
