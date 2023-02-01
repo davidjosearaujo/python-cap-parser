@@ -1,5 +1,5 @@
-import element
-import enums
+from . import element
+from . import enums
 import xml.etree.ElementTree as ET
 import inspect
 

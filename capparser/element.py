@@ -1,5 +1,5 @@
+from . import enums
 from datetime import datetime, timezone
-import enums
 import random
 import re
 
