@@ -1,5 +1,5 @@
-import element
-import enums
+from . import element
+from . import enums
 import xml.etree.ElementTree as ET
 import inspect
 
@@ -55,9 +55,10 @@ def writeAlertToFile(alert, filePath):
     with open(filePath, "wb") as files:
         tree.write(files)
 
-def _recursiveDeparser(obj, outputFilePath=None):
+def _recursiveDeparser(obj):
     root = ET.Element(str(obj))
     attrs = _filterOrderAttributes(inspect.getmembers(obj))
+    
     for attr in attrs:
         if attr[0] == "xmlns":
             root.set(attr[0], attr[1][0])
@@ -67,13 +68,14 @@ def _recursiveDeparser(obj, outputFilePath=None):
                     root.append(_recursiveDeparser(item))
                 else:
                     child = ET.SubElement(root, attr[0])
-                    child.text = item
+                    child.text = str(item)
         else:
             if isinstance(attr[1][0], element.Alert) or isinstance(attr[1][0], element.Info) or isinstance(attr[1][0], element.EventCode) or isinstance(attr[1][0], element.Parameter) or isinstance(attr[1][0], element.Resource) or isinstance(attr[1][0], element.Area) or isinstance(attr[1][0], element.Geocode):
                 root.append(_recursiveDeparser(attr[1][0]))
             else:
                 child = ET.SubElement(root, attr[0])
-                child.text = attr[1][0]
+                child.text = str(attr[1][0])
+                
     return root
 
 
