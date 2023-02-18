@@ -49,6 +49,9 @@ def _recursiveParser(parent):
 def deparse(alert):
     return ET.tostring(_recursiveDeparser(alert), encoding='utf8')
 
+def byteArray(alert):
+    return bytes(ET.tostring(_recursiveDeparser(alert), encoding='utf8'))
+
 def writeAlertToFile(alert, filePath):
     root = _recursiveDeparser(alert)
     tree = ET.ElementTree(root)
