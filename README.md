@@ -1,9 +1,5 @@
 # Common Alerting Procotol (CAP) Parser
 
-## CAP (De)Parser
-
-
-
 ## What is CAP ?
 
 > *The Common Alerting Protocol (CAP), a digital format for exchanging emergency alerts, allows a consistent alert message to be disseminated simultaneously over multiple communications pathways.*
@@ -26,7 +22,7 @@ It was developed by **Oasis Open**, and full specifications can be found [here](
 
 ### Example
 
-```` XML
+``` XML
 <alert xmlns="urn:oasis:names:tc:emergency:cap:1.2">
     <identifier>43b080713727</identifier>
     <sender>hsas@dhs.gov</sender>
@@ -64,4 +60,47 @@ It was developed by **Oasis Open**, and full specifications can be found [here](
         </area>
     </info>
 </alert>
-````
+```
+
+## How to Use
+
+``` Python
+import capparser
+
+alert = capparser.element.Alert(sender="FireTec",
+                                status=capparser.enums.Status.Actual,
+                                msgType=capparser.enums.MsgType.Alert,
+                                scope=capparser.enums.Scope.Private)
+alert.setSource("FireTec")
+alert.addAddress("Radio Renascenca")
+
+info = capparser.element.Info(category=[capparser.enums.Category.Fire],
+                              event="Incendio Florestal em Sever do Vouga",
+                              urgency=capparser.enums.Urgency.Immediate,
+                              severity=capparser.enums.Severity.Severe,
+                              certainty=capparser.enums.Certainty.Observed)
+info.setSenderName("FireTec")
+info.setInstruction(
+    "Foi detetado um possivel incendio florestal na sua area, precaucao e aconselhada.")
+
+param1 = capparser.element.Parameter(parameterName="PS",
+                                     parameterValue="PS=Radio Renascenca")
+param2 = capparser.element.Parameter(parameterName="PI",
+                                     parameterValue="PI=80XX")
+param3 = capparser.element.Parameter(parameterName="AF",
+                                     parameterValue="AF=95.0")
+param4 = capparser.element.Parameter(parameterName="AF",
+                                     parameterValue="AF=100.0")
+param5 = capparser.element.Parameter(parameterName="AF",
+                                     parameterValue="AF=105.0")
+
+info.addParameter(param1)
+info.addParameter(param2)
+info.addParameter(param3)
+info.addParameter(param4)
+info.addParameter(param5)
+
+alert.addInfo(info)
+
+capparser.writeAlertToFile(alert, "output.xml")
+```
