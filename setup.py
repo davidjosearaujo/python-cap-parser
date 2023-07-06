@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="capparser",
-    version="2.0.3",
+    version="2.0.4",
     author="David Araújo",
     author_email="david2araujo5@gmail.com",
     description="Common Alerting Protocol (CAP) parser",
@@ -14,7 +14,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: Apache License",
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
